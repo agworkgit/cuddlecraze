@@ -1,8 +1,7 @@
-# React + Vite
+# CuddleCraze (Prototype Phase)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Where Every Pet Finds a Hug, and Every Heart Finds a Friend.
 
-Currently, two official plugins are available:
+# Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Pre-production demo of pet page.](./resources/demo_3.png)
