@@ -22,16 +22,31 @@
   --header-size: clamp(1rem, 0.9559rem + 0.2353vw, 1.25rem);
   --paragraph-size: clamp(0.875rem, 0.8529rem + 0.1176vw, 1rem);
   --link-size: clamp(0.875rem, 0.8529rem + 0.1176vw, 1rem);
-  --buttons-tooltips: clamp(0.875rem, 0.8529rem + 0.1176vw, 1rem);
+  --buttons-tooltips: clamp(0.625rem, 0.6029rem + 0.1176vw, 0.75rem);
   --small-print: clamp(0.5rem, 0.4779rem + 0.1176vw, 0.625rem);
   /* Font Style */
   --italic: italic;
+  /* Bottom Margins */
+  /* 0.5rem = 8px | 1rem = 16px */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+  /* Layer Position */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
 }
 
 /* Colors Palette*/
   /* Light Mode */
   #light-mode {
   --background-color: #FEFAE0;
+  --background-color-transparent: rgba(254, 250, 224, 0.5);
   --title-color: #283618;
   --paragraph-color: #BC6C25;
   --link-default-color: #DDA15E;
@@ -50,6 +65,7 @@
   /* Dark Mode */
   #dark-mode {
   --background-color: #283618;
+  --background-color-transparent: rgba(40, 54, 24, 0.5);
   --title-color: #FEFAE0;
   --paragraph-color: #FEFAE0;
   --link-default-color: #FEFAE0;
@@ -159,14 +175,15 @@ img {
   cursor: pointer;
   display: inline-block;
   background-color: var(--title-color);
-  color: var(--contaier-color);
-  padding: 1.25rem 2rem;
-  border-radius: 1rem;
-  font-weight: var(--font-medium);
+  color: var(--background-color);
+  padding: 0.5rem 1rem;
+  border-radius: 10rem;
+  font-size: var(--buttons-tooltips);
 }
 
 .button:hover {
-  background-color: var(--title-color-dark);
+  background-color: var(--button-hover-color);
+  color: var(--title-color);
 }
 
 .button-icon {
@@ -176,4 +193,17 @@ img {
 .button-flex {
   display: inline-flex;
   align-items: center;
+}
+
+/* Breakpoints */
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 576px) {
+
+}
+
+@media screen and (max-width: 350px) {
+
 }

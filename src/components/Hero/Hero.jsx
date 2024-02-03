@@ -2,8 +2,7 @@ import HeroCard from "./HeroCard";
 
 function Hero() {
     return ( 
-        <div className="hero-container grid">
-        <HeroCard />
+        <div className="hero-container container grid">
         <HeroCard />
         </div>
      );
