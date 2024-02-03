@@ -1,42 +1,179 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Font Imports */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Font Defaults */
+
+:root {
+  /* Header */
+  --header-height: 3rem;
+  /* Font Selection */
+  --title-font: 'DM Serif Display', serif;
+  --description-font: 'Inter', sans-serif;
+  /* Font Weight */
+  --light-font: '300';
+  --medium-font: '500';
+  --regular-font: '400' ;
+  --semibold-font: '600';
+  --bold-font: '700';
+  /* Font Size - 0.5rem = 8px; | 1rem = 16px */
+  --title-size: clamp(1.5rem, 1.3676rem + 0.7059vw, 2.25rem);
+  --header-size: clamp(1rem, 0.9559rem + 0.2353vw, 1.25rem);
+  --paragraph-size: clamp(0.875rem, 0.8529rem + 0.1176vw, 1rem);
+  --link-size: clamp(0.875rem, 0.8529rem + 0.1176vw, 1rem);
+  --buttons-tooltips: clamp(0.875rem, 0.8529rem + 0.1176vw, 1rem);
+  --small-print: clamp(0.5rem, 0.4779rem + 0.1176vw, 0.625rem);
+  /* Font Style */
+  --italic: italic;
+}
+
+/* Colors Palette*/
+  /* Light Mode */
+  #light-mode {
+  --background-color: #FEFAE0;
+  --title-color: #283618;
+  --paragraph-color: #BC6C25;
+  --link-default-color: #DDA15E;
+  --link-hover-color: #BC6C25;
+  --button-color: #DDA15E;
+  --button-hover-color: #BC6C25;
+  --input-border-color: #BC6C25;
+  --input-field-color: #FEFAE0;
+  --modal-bg-color: #283618;
+  --modal-title-color: #BC6C25;
+  --modal-paragraph-color: #283618;
+  --modal-button-color: #FEFAE0;
+  --modal-button-bg: #BC6C25;
+  --modal-button-bg-hover: #DDA15E;
+  }
+  /* Dark Mode */
+  #dark-mode {
+  --background-color: #283618;
+  --title-color: #FEFAE0;
+  --paragraph-color: #FEFAE0;
+  --link-default-color: #FEFAE0;
+  --link-hover-color: #889950;
+  --button-color: #DDA15E;
+  --button-hover-color: #BC6C25;
+  --input-border-color: #FEFAE0;
+  --input-field-color: #FEFAE0;
+  --modal-bg-color: #DDA15E;
+  --modal-title-color: #889950;
+  --modal-paragraph-color: #FEFAE0;
+  --modal-button-color: #FEFAE0;
+  --modal-button-bg: #889950;   
+  --modal-button-bg-hover: #283618;
+  }
+
+
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+h1 {
+  font-family: var(--title-font);
+  font-size: var(--title-size);
+}
+
+p {
+  font-family: var(--description-font);
+  font-size: var(--paragraph-size);
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: var(--description-font);
+  font-size: var(--paragraph-size);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.switch-theme {
+  display: flex;
+  align-items: center;
+  transform: scale(0.80);
+}
+
+/* Reusable Classes */
+.section {
+  padding: 6rem 0 2rem;
+  background-color: var(--background-color) !important;
+}
+
+.section-title {
+  font-size: var(--xxl-size);
+  color: var(--title-color);
+}
+
+.section-subtitle {
+  display: block;
+  font-size: var(--s-size);
+  margin-bottom: 4rem !important;
+  color: var(--text-color);
+}
+
+.section-title,
+.section-subtitle {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Layout */
+.container {
+  max-width: 968px;
+  margin-inline: auto;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.grid {
+  display: grid;
+  gap: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Buttons */
+.button {
+  cursor: pointer;
+  display: inline-block;
+  background-color: var(--title-color);
+  color: var(--contaier-color);
+  padding: 1.25rem 2rem;
+  border-radius: 1rem;
+  font-weight: var(--font-medium);
 }
 
-.card {
-  padding: 2em;
+.button:hover {
+  background-color: var(--title-color-dark);
 }
 
-.read-the-docs {
-  color: #888;
+.button-icon {
+  margin-left: var(--mb-0-5);
+}
+
+.button-flex {
+  display: inline-flex;
+  align-items: center;
 }
