@@ -65,13 +65,13 @@ const Header = () => {
             )}
 
             <li className="nav-item">
-              <Link to="/portfolio" className="nav-link" onClick={() => { handleMenuClose(); }}>
+              <Link to="/" className="nav-link" onClick={() => { handleMenuClose(); }}>
                 <i className="bi bi-file-earmark-code nav-icon"></i> Services
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link to="/contact" className="nav-link check-link" onClick={() => { handleMenuClose(); }}>
+              <Link to="/" className="nav-link check-link" onClick={() => { handleMenuClose(); }}>
                 <i className="bi bi-envelope nav-icon"></i> Check Our Pets
               </Link>
             </li>

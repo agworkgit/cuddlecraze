@@ -2,7 +2,7 @@ import './App.css'
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { createContext, useState, useEffect } from 'react';
 import Header from './components/Header/Header';
-import Home from './components/Home/Home';
+import LandingPage from './pages/LandingPage/LandingPage';
 
 
 export const ThemeContext = createContext('dark-mode');
@@ -29,7 +29,7 @@ export const App = () => {
               path="/"
               element={
                 <>
-                  <Home />
+                  <LandingPage />
                   {/* <Home />
               <About id="about"/>
               <Skills id="skills"/>
