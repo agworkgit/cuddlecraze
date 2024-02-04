@@ -1,0 +1,130 @@
+.form-container {
+    display: flex;
+    flex: 1;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--paragraph-color) !important;
+    width: 81%;
+    margin: 0 auto;
+  }
+
+  .form-title {
+    text-align: center;
+    padding-bottom: 1.5rem;
+    color: var(--background-color);
+    font-family: var(--title-font);
+  }
+  
+  fieldset {
+    display: flex;
+    width: 20vh;
+    padding: 3rem;
+    border: none;
+    border-radius: 4px;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 8px;
+    margin-right: 8px;
+    width: max-content;
+    font-size: var(--buttons-tooltips);
+    font-family: var(--description-font);
+    color: var(--background-color);
+    text-align: center;
+  }
+  
+  sup {
+    color: var(--title-color);
+    top: -2px;
+    font-size: 95%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  input,
+  select {
+    border-radius: 4px;
+    border: none;
+    background-color: var(--button-color);
+    height: 2rem;
+    padding: 0 1.5rem;
+    border-radius: 3rem;
+    font-size: var(--buttons-tooltips);
+  }
+
+  ::placeholder {
+    text-align: center; 
+    color: var(--background-color-transparent)
+ }
+  
+  .Field {
+    position: relative;
+    padding-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .FieldError {
+    position: absolute;
+    bottom: -6px;
+    color: red;
+    font-size: 12px;
+  }
+  
+  .Row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .button-form {
+    padding: 0.5rem 16px;
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    background-color: var(--form-button-color);
+    color: var(--backgroun-color);
+    border-radius: 1rem;
+  }
+
+  .button-form:hover {
+    background-color: var(--form-button-hover-color);
+    color: var(--background-color);
+  }
+  
+  button:disabled,
+  button[disabled] {
+    border: none;
+    background-color: var(--disabled-button-color);
+    color: var(--background-color);
+    cursor: not-allowed;
+  }
+
+  button:disabled:hover,
+  button[disabled]:hover {
+    background-color: var(--disabled-button-hover-color);
+  }
+  
+/* Breakpoints */
+@media screen and (max-width: 992px) {
+    .form-container {
+        width: 81%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .form-container {
+        width: 81%;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+
+  }
+  
+  @media screen and (max-width: 350px) {
+
+  }

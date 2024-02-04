@@ -57,6 +57,10 @@
   --card-text-color: #FEFAE0;
   --button-color: #DDA15E;
   --button-hover-color: #BC6C25;
+  --form-button-color: #889950;
+  --form-button-hover-color: #283618;
+  --disabled-button-color: #909b6e;
+  --disabled-button-hover-color: #323929;
   --input-border-color: #BC6C25;
   --input-field-color: #FEFAE0;
   --modal-bg-color: #283618;
@@ -78,6 +82,10 @@
   --card-text-color: #FEFAE0;
   --button-color: #DDA15E;
   --button-hover-color: #BC6C25;
+  --form-button-color: #DDA15E;
+  --form-button-hover-color: #BC6C25;
+  --disabled-button-color: #d8b388;
+  --disabled-button-hover-color: #b78356;
   --input-border-color: #FEFAE0;
   --input-field-color: #FEFAE0;
   --modal-bg-color: #DDA15E;
