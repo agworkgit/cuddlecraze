@@ -56,6 +56,7 @@
 /* Breakpoints */
 @media screen and (max-width: 992px) {
     .testimonials-container {
+        width: 81%;
     }
 
     .testimonial-card {
@@ -70,15 +71,18 @@
     }
 
     .testimonials-container {
+        width: 81%;
     }
   }
   
   @media screen and (max-width: 576px) {
     .testimonials-container {
+        width: 81%;
     }
   }
   
   @media screen and (max-width: 350px) {
     .testimonials-container {
+        width: 81%;
     }
   }
