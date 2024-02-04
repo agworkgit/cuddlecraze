@@ -1,7 +1,8 @@
 .hero-info {
-    padding-block: 6rem;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
 }
 
 .card-item {
@@ -29,17 +30,27 @@
     padding: 1rem;
   }
 
-  .card-title {
+  .card-title-hero {
     font-family: var(--description-font);
     text-align: left;
     color: var(--title-color);
-    font-size: var(--header-size);
+    font-size: var(--info-size);
     margin-bottom: 10px;
   }
 
 /* Breakpoints */
 @media screen and (max-width: 992px) {
+    .hero-info {
+        width: 80%;
+        margin-inline: auto;
+    }
+}
 
+@media screen and (max-width: 768px) {
+    .hero-info {
+        width: 85%;
+        margin-inline: auto;
+    }
 }
 
 @media screen and (max-width: 576px) {

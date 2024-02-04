@@ -21,7 +21,8 @@
   --title-size: clamp(1.5rem, 1.3676rem + 0.7059vw, 2.25rem);
   --header-size: clamp(1rem, 0.9559rem + 0.2353vw, 1.25rem);
   --paragraph-size: clamp(0.875rem, 0.8529rem + 0.1176vw, 1rem);
-  --link-size: clamp(0.875rem, 0.8529rem + 0.1176vw, 1rem);
+  --info-size: clamp(0.75rem, 0.7279rem + 0.1176vw, 0.875rem);
+  --link-size: clamp(0.625rem, 0.5588rem + 0.3529vw, 1rem);
   --buttons-tooltips: clamp(0.625rem, 0.6029rem + 0.1176vw, 0.75rem);
   --small-print: clamp(0.5rem, 0.4779rem + 0.1176vw, 0.625rem);
   /* Font Style */
@@ -51,6 +52,8 @@
   --paragraph-color: #BC6C25;
   --link-default-color: #DDA15E;
   --link-hover-color: #BC6C25;
+  --card-color: #283618;
+  --card-text-color: #FEFAE0;
   --button-color: #DDA15E;
   --button-hover-color: #BC6C25;
   --input-border-color: #BC6C25;
@@ -70,6 +73,8 @@
   --paragraph-color: #FEFAE0;
   --link-default-color: #FEFAE0;
   --link-hover-color: #889950;
+  --card-color: #889950;
+  --card-text-color: #FEFAE0;
   --button-color: #DDA15E;
   --button-hover-color: #BC6C25;
   --input-border-color: #FEFAE0;
@@ -128,6 +133,7 @@ button {
 img {
   max-width: 100%;
   height: auto;
+  object-position: center;
 }
 
 .switch-theme {
@@ -138,7 +144,7 @@ img {
 
 /* Reusable Classes */
 .section {
-  padding: 6rem 0 2rem;
+  padding: 3rem 0 2rem;
   background-color: var(--background-color) !important;
 }
 
@@ -174,8 +180,8 @@ img {
 .button {
   cursor: pointer;
   display: inline-block;
-  background-color: var(--title-color);
-  color: var(--background-color);
+  background-color: var(--button-color);
+  color: var(--title-color);
   padding: 0.5rem 1rem;
   border-radius: 10rem;
   font-size: var(--buttons-tooltips);
@@ -197,6 +203,10 @@ img {
 
 /* Breakpoints */
 @media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
 
 }
 
