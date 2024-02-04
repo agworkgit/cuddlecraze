@@ -122,6 +122,8 @@ p {
 
 body {
   background-color: var(--background-color);
+  position: relative;
+  overflow-x: hidden;
 }
 
 ul {
@@ -217,7 +219,7 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  
+
 }
 
 @media screen and (max-width: 576px) {
