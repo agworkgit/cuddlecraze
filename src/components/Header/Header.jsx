@@ -25,10 +25,15 @@ const Header = () => {
     }
   }, [location]);
 
+  const logoImage = theme === 'dark-mode' ? './logos/cuddle-craze-light.png' : './logos/cuddle-craze-dark.png';
+
   return (
     <header className="header">
       <nav className="nav container">
-        <Link to="/" className="nav-logo">CuddleCraze</Link>
+        <Link to="/" className="nav-logo">
+          <img className="nav-logo" src={logoImage} alt="" />
+          <h1 className="nav-logo-title">CuddleCraze</h1>
+          </Link>
 
         <div className={isMenuOpen ? "nav-menu show-menu" : "nav-menu"}>
           <ul className="nav-list">
@@ -56,7 +61,7 @@ const Header = () => {
 
                     <li className="nav-item">
                       <ScrollLink to="services" className="nav-link" smooth="true" duration={200} onClick={() => { handleMenuClose(); }}>
-                        <i className="bi bi-briefcase nav-icon"></i> Need Advice?
+                        <i className="bi bi-briefcase nav-icon"></i> Advice
                       </ScrollLink>
                     </li>
                   </>
@@ -75,15 +80,8 @@ const Header = () => {
                 <i className="bi bi-envelope nav-icon"></i> Check Our Pets
               </Link>
             </li>
-          </ul>
 
-          {/* Close Menu Button */}
-          {isMenuOpen && (
-            <i className="bi bi-x nav-close" onClick={handleMenuClose}></i>
-          )}
-        </div>
-
-        {/* Theme Toggle */}
+            {/* Theme Toggle */}
         {!isMenuOpen && (
           <div className="switch-theme">
             <ReactSwitch
@@ -100,6 +98,13 @@ const Header = () => {
             ></ReactSwitch>
           </div>
         )}
+          </ul>
+
+          {/* Close Menu Button */}
+          {isMenuOpen && (
+            <i className="bi bi-x nav-close" onClick={handleMenuClose}></i>
+          )}
+        </div>
 
         <div className="nav-toggle" onClick={handleMenuToggle}>
           <i className="bi bi-list"></i>
