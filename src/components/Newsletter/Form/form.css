@@ -1,11 +1,9 @@
 .form-container {
     display: flex;
-    flex: 1;
     height: 20%;
     justify-content: center;
     align-items: center;
     background-color: var(--paragraph-color) !important;
-    width: 100vw;
     max-width: 968px;
     margin: 0 auto;
     padding: 0 !important;
@@ -20,10 +18,9 @@
   
   fieldset {
     display: flex;
-    width: 20vh;
     padding: 3rem;
     border: none;
-    border-radius: 4px;
+    /* border-radius: 4px; */
     flex-direction: column;
   }
   
@@ -37,14 +34,14 @@
     text-align: center;
   }
   
-  sup {
+  /* sup {
     color: var(--title-color);
     top: -2px;
     font-size: 95%;
     line-height: 0;
     position: relative;
     vertical-align: baseline;
-  }
+  } */
   
   input,
   select {
