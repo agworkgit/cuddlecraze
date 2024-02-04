@@ -1,10 +1,10 @@
-import './highlight.css';
+import './highlight-card.css';
 
 function HighlightCard() {
     return ( 
-        <div className="highlight-card">
+        <div className="highlight-cards">
             <div className="highlight-info grid">
-            <div className='card-item'>
+            <div className='highlight-card-item'>
                 <div className="highlight-card primary-card">
                     <div>
                         <img className="hero-image" src="./images/woofy.jpg" alt="Betsy" />
@@ -16,7 +16,7 @@ function HighlightCard() {
                 </div>
             </div>
 
-            <div className='card-item'>
+            <div className='highlight-card-item'>
                 <div className="highlight-card">
                     <div>
                         <img className="hero-image" src="./images/jack.jpg" alt="Betsy" />
@@ -28,7 +28,7 @@ function HighlightCard() {
                 </div>
             </div>
 
-            <div className='card-item'>
+            <div className='highlight-card-item'>
                 <div className="highlight-card">
                     <div>
                         <img className="hero-image" src="./images/stella.jpg" alt="Betsy" />
@@ -40,7 +40,7 @@ function HighlightCard() {
                 </div>
             </div>
 
-            <div className='card-item'>
+            <div className='highlight-card-item'>
                 <div className="highlight-card">
                     <div>
                         <img className="hero-image" src="./images/charlie.jpg" alt="Betsy" />
@@ -52,7 +52,7 @@ function HighlightCard() {
                 </div>
             </div>
 
-            <div className='card-item'>
+            <div className='highlight-card-item'>
                 <div className="highlight-card">
                     <div>
                         <img className="hero-image" src="./images/betsy.jpg" alt="Betsy" />

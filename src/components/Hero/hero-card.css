@@ -8,6 +8,8 @@
 .card-item {
     position: relative;
     overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
   }
 
 .hero-image {
@@ -43,6 +45,8 @@
     .hero-info {
         width: 80%;
         margin-inline: auto;
+        padding-top: 6rem;
+        padding-bottom: 3rem;
     }
 }
 
@@ -50,14 +54,17 @@
     .hero-info {
         width: 85%;
         margin-inline: auto;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
 }
 
 @media screen and (max-width: 576px) {
     .hero-info {
-        padding-block: 6rem;
         grid-template-columns: repeat(1, 1fr);
-        gap: 3rem;
+        gap: 1.5rem;
+        padding-top: 2rem;
+        padding-bottom: 3rem;
     }
 }
 

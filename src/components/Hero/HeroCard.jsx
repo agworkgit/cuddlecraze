@@ -1,8 +1,9 @@
 import './hero-card.css'
+import './hero.css'
 
 function HeroCard() {
     return (
-        <div className="hero-info grid">
+        <div className="hero-info grid hero-container">
             <div className='card-item'>
                 <div className="hero-card">
                     <div>
