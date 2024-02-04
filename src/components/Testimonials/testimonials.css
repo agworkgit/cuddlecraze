@@ -46,7 +46,7 @@
 /* Swiper Class */
 
 .swiper-pagination-bullet {
-    background-color: var(--text-color) !important;
+    background-color: var(--link-hover-color) !important;
 }
 
 .swiper-pagination-bullet-active {

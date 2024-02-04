@@ -21,7 +21,7 @@ const Header = () => {
 
   useEffect(() => {
     if (location.pathname !== '/portfolio' && location.pathname !== '/contact') {
-      // Additional logic you want to perform when not on portfolio or contact
+      // Additional logic to perform when not on portfolio or contact
     }
   }, [location]);
 
@@ -33,7 +33,7 @@ const Header = () => {
         <Link to="/" className="nav-logo">
           <img className="nav-logo" src={logoImage} alt="" />
           <h1 className="nav-logo-title">CuddleCraze</h1>
-          </Link>
+        </Link>
 
         <div className={isMenuOpen ? "nav-menu show-menu" : "nav-menu"}>
           <ul className="nav-list">
@@ -82,8 +82,35 @@ const Header = () => {
             </li>
 
             {/* Theme Toggle */}
-        {!isMenuOpen && (
-          <div className="switch-theme">
+            <div className="switch-theme">
+              <ReactSwitch
+                onChange={toggleTheme}
+                checked={theme === "dark-mode"}
+                onColor="#FEFAE0"
+                offColor="#283618"
+                onHandleColor="#283618"
+                activeBoxShadow='0 0 2px 3px #3bf'
+                uncheckedIcon={false}
+                checkedIcon={false}
+                height={16}
+                width={30}
+              ></ReactSwitch>
+            </div>
+          </ul>
+
+          {/* Close Menu Button */}
+          {isMenuOpen && (
+            <p className="nav-close button" onClick={handleMenuClose}>Close</p>
+          )}
+        </div>
+
+        <div className="nav-toggle" onClick={handleMenuToggle}>
+          <p className="open-drawer">Menu</p>
+          
+        </div>
+
+        {/* Theme Toggle for Mobile */}
+        <div className="switch-theme-mobile">
             <ReactSwitch
               onChange={toggleTheme}
               checked={theme === "dark-mode"}
@@ -97,18 +124,6 @@ const Header = () => {
               width={30}
             ></ReactSwitch>
           </div>
-        )}
-          </ul>
-
-          {/* Close Menu Button */}
-          {isMenuOpen && (
-            <i className="bi bi-x nav-close" onClick={handleMenuClose}></i>
-          )}
-        </div>
-
-        <div className="nav-toggle" onClick={handleMenuToggle}>
-          <i className="bi bi-list"></i>
-        </div>
       </nav>
     </header>
   );

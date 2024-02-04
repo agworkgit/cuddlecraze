@@ -40,6 +40,7 @@
   /* Layer Position */
   --z-tooltip: 10;
   --z-fixed: 100;
+  --z-relative: 50;
   --z-modal: 1000;
 }
 
@@ -207,7 +208,7 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-
+  
 }
 
 @media screen and (max-width: 576px) {

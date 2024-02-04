@@ -1,5 +1,97 @@
 .footer-container {
-    height: 20vh;
     background-color: var(--button-color);
     width: 81%;
+}
+
+.brand-container {
+    display: grid;
+    grid-template-columns: 1fr repeat(1, 1fr);
+    align-items: center;
+}
+
+.footer-logo {
+    height: 256px;
+    width: auto;
+}
+
+.footer-title {
+    padding: 2rem;
+}
+
+.footer-info {
+    font-family: var(--description-font);
+    color: var(--title-color);
+    font-size: var(--small-print);
+    text-align: center;
+}
+
+.company-slogan {
+    color: var(--title-color);
+    text-align: center;
+    font-size: var(--header-size);
+}
+
+.work-schedule {
+    display: flex;
+    justify-content: center;
+    padding-block: 0.25rem;
+    font-family: var(--description-font);
+    color: var(--title-color);
+    text-align: center;
+    font-size: var(--small-print);
+}
+
+.footer-end-title {
+    font-size: var(--header-size);
+}
+
+.footer-end-rights {
+    font-family: var(--description-font);
+    font-size: var(--small-print);
+}
+
+.footer-spacing {
+    height: 3vh;
+    width: 100%;
+}
+
+/* Breakpoints */
+@media screen and (max-width: 992px) {}
+
+@media screen and (max-width: 768px) {
+    .footer-spacing {
+        height: 8vh;
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .footer-spacing {
+        height: 8vh;
+    }
+
+    .footer-logo {
+        height: auto;
+        width: auto;
+    }
+
+    .brand-container {
+        grid-template-columns: 0.5fr repeat(1, 1.5fr);
+        align-items: center;
+    }
+
+    .footer-container {
+        padding: 1rem;
+    }
+}
+
+/* For small size devices */
+@media screen and (max-width: 350px) {
+    .footer-spacing {
+        height: 8vh;
+    }
+
+    .footer-logo {
+        height: auto;
+        width: auto;
+    }
 }
