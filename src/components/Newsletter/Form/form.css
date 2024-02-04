@@ -70,12 +70,12 @@
     align-items: center;
   }
   
-  .FieldError {
+  /* .FieldError {
     position: absolute;
     bottom: -6px;
     color: red;
     font-size: 12px;
-  }
+  } */
   
   .Row {
     display: flex;
