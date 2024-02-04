@@ -38,7 +38,7 @@ const Header = () => {
         <div className={isMenuOpen ? "nav-menu show-menu" : "nav-menu"}>
           <ul className="nav-list">
             <li className="nav-item">
-              <Link to="/" className="nav-link" onClick={() => { handleMenuClose(); }}>
+              <Link to="/login" className="nav-link" onClick={() => { handleMenuClose(); }}>
                 <i className="bi bi-house nav-icon"></i> Login / Sign Up
               </Link>
             </li>

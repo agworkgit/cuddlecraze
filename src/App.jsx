@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { createContext, useState, useEffect } from 'react';
 import Header from './components/Header/Header';
 import LandingPage from './pages/LandingPage/LandingPage';
+import LoginPage from './pages/LoginPage/LoginPage';
 
 
 export const ThemeContext = createContext('dark-mode');
@@ -49,7 +50,14 @@ export const App = () => {
             </>
           }
         /> */}
-
+            <Route
+          path="/login"
+          element={
+            <>
+              <LoginPage id="login" />
+            </>
+          }
+        />
           </Routes>
         </Router>
       </div>

@@ -5,6 +5,7 @@
 
 /* Font Defaults */
 
+/* Variables */
 :root {
   /* Header */
   --header-height: 3rem;
@@ -98,6 +99,10 @@
 
 
 /* Base */
+.App {
+  background-color: var(--background-color);
+}
+
 * {
   margin: 0;
   padding: 0;
