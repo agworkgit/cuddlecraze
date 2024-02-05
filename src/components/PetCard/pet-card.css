@@ -20,23 +20,42 @@
     object-position: center;
 }
 
-.card-title-card {
+.pet-card-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.pet-title {
     color: var(--card-text-color);
     text-align: center;
-    font-size: var(--header-size);
+    font-size: var(--description-size);
     margin-block: 1rem;
 }
 
-.card-subtitle-card {
+.pet-location {
+    color: var(--card-text-color);
+    text-align: center;
+    font-size: var(--buttons-tooltips);
+}
+
+.pet-subtitle {
     color: var(--card-text-color);
     text-align: center;
     padding: 1rem;
     margin-bottom: 1rem;
+    font-size: var(--buttons-tooltips);
+}
+
+.pet-card-button {
+    font-size: var(--buttons-tooltips);
 }
 
 .fav-icon {
     fill: var(--favourite-color);
-    height: 64px;
+    height: 54px;
   }
 
 .fav-icon:hover {
@@ -60,10 +79,11 @@
 .rezerved-tag {
     position: relative;
     font-family: var(--description-font);
-    color: var(--title-color);
-    background-color: var(--button-color);
+    color: var(--paragraph-color);
+    background-color: var(--background-color);
     padding: 0.5rem;
     border-radius: 3rem;
+    font-size: var(--buttons-tooltips);
 }
 
 /* Breakpoints */

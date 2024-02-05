@@ -1,6 +1,7 @@
 import './pets-page.css';
 import PetCard from '../../components/PetCard/PetCard';
 import Footer from '../../components/Footer/Footer';
+import SectionBorder from '../../components/SectionBorder/SectionBorder';
 
 function PetsPage() {
     return (
@@ -11,6 +12,7 @@ function PetsPage() {
                 <PetCard />
                 <PetCard />
             </div>
+            <SectionBorder/>
             <Footer />
         </div>
     );

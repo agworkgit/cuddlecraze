@@ -1,0 +1,56 @@
+.account-container {
+    background-color: var(--background-color);
+    /* height: 100vh; */
+    padding-top: 6rem;
+    max-width: 968px;
+    margin: 0 auto;
+}
+
+.account-content {
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+
+/* Breakpoints */
+@media screen and (max-width: 992px) {
+    .account-container {
+        padding-top: 6rem;
+        max-width: 79%;
+    }
+
+    .account-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .account-container {
+        max-width: 79%;
+    }
+
+    .account-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .account-container {
+        padding-top: 2rem;
+        max-width: 79%;
+    }
+
+    .account-content {
+        padding-top: 2rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .account-content {
+        padding-top: 2rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

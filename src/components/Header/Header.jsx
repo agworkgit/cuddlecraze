@@ -76,8 +76,8 @@ const Header = () => {
             )}
 
             <li className="nav-item">
-              <Link to="/" className="nav-link" onClick={() => { handleMenuClose(); }}>
-                <i className="bi bi-file-earmark-code nav-icon"></i> Services
+              <Link to="/account-page" className="nav-link" onClick={() => { handleMenuClose(); }}>
+                <i className="bi bi-file-earmark-code nav-icon"></i> Account
               </Link>
             </li>
 

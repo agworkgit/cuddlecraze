@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import LandingPage from './pages/LandingPage/LandingPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import PetsPage from './pages/PetsPage/PetsPage';
+import AccountPage from './pages/AccountPage/AccountPage';
 
 
 export const ThemeContext = createContext('dark-mode');
@@ -56,6 +57,14 @@ export const App = () => {
               element={
                 <>
                   <LoginPage id="login" />
+                </>
+              }
+            />
+            <Route
+              path="/account-page"
+              element={
+                <>
+                  <AccountPage id="account-page" />
                 </>
               }
             />
