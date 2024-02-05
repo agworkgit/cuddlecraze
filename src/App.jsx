@@ -4,6 +4,7 @@ import { createContext, useState, useEffect } from 'react';
 import Header from './components/Header/Header';
 import LandingPage from './pages/LandingPage/LandingPage';
 import LoginPage from './pages/LoginPage/LoginPage';
+import PetsPage from './pages/PetsPage/PetsPage';
 
 
 export const ThemeContext = createContext('dark-mode');
@@ -51,13 +52,21 @@ export const App = () => {
           }
         /> */}
             <Route
-          path="/login"
-          element={
-            <>
-              <LoginPage id="login" />
-            </>
-          }
-        />
+              path="/login"
+              element={
+                <>
+                  <LoginPage id="login" />
+                </>
+              }
+            />
+            <Route
+              path="/pets-page"
+              element={
+                <>
+                  <PetsPage id="pets-page" />
+                </>
+              }
+            />
           </Routes>
         </Router>
       </div>

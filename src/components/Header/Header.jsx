@@ -37,6 +37,12 @@ const Header = () => {
 
         <div className={isMenuOpen ? "nav-menu show-menu" : "nav-menu"}>
           <ul className="nav-list">
+          <li className="nav-item">
+              <Link to="/" className="nav-link" onClick={() => { handleMenuClose(); }}>
+                <i className="bi bi-house nav-icon"></i> Home
+              </Link>
+            </li>
+
             <li className="nav-item">
               <Link to="/login" className="nav-link" onClick={() => { handleMenuClose(); }}>
                 <i className="bi bi-house nav-icon"></i> Login / Sign Up
@@ -76,7 +82,7 @@ const Header = () => {
             </li>
 
             <li className="nav-item">
-              <Link to="/" className="nav-link check-link" onClick={() => { handleMenuClose(); }}>
+              <Link to="/pets-page" className="nav-link check-link" onClick={() => { handleMenuClose(); }}>
                 <i className="bi bi-envelope nav-icon"></i> Check Our Pets
               </Link>
             </li>

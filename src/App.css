@@ -70,6 +70,8 @@
   --modal-button-color: #FEFAE0;
   --modal-button-bg: #BC6C25;
   --modal-button-bg-hover: #DDA15E;
+  --favourite-color: rgb(233, 14, 79);
+  --favourite-color-hover: rgb(255, 84, 98);
   }
   /* Dark Mode */
   #dark-mode {
@@ -95,6 +97,8 @@
   --modal-button-color: #FEFAE0;
   --modal-button-bg: #889950;   
   --modal-button-bg-hover: #283618;
+  --favourite-color: rgb(255, 84, 98);
+  --favourite-color-hover: rgb(233, 14, 79);
   }
 
 
