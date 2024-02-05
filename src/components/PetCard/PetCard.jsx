@@ -9,7 +9,7 @@ function PetCard() {
                     <div className="pet-card">
                         <div>
                         
-                            <img className="hero-image" src="./images/woofy.jpg" alt="Betsy" />
+                            <img className="card-image" src="./images/stella.jpg" alt="Betsy" />
                             <div className="card-overlay-list">
                             <p className="rezerved-tag">Rezerved</p>
                                 <h1 className="card-title-card">Pet Name</h1>
