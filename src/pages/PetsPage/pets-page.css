@@ -9,7 +9,7 @@
 .pets-content {
     padding-top: 1rem;
     padding-bottom: 4rem;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
 
@@ -20,11 +20,19 @@
         padding-top: 6rem;
         max-width: 79%;
     }
+
+    .pets-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width: 768px) {
     .pets-container {
         max-width: 79%;
+    }
+
+    .pets-content {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
