@@ -97,7 +97,7 @@ const clearForm = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <div className="Field">
+          {/* <div className="Field">
             <label>
               Password <sup>*</sup>
             </label>
@@ -113,7 +113,7 @@ const clearForm = () => {
             {password.isTouched && password.value.length < 8 && (
               <PasswordErrorMessage />
             )}
-          </div>
+          </div> */}
           {/* <div className="Field">
             <label>
               Role <sup>*</sup>
