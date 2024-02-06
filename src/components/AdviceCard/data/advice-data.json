@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "title": "First Advice Blog",
+      "image": "path/to/image.jpg",
+      "minutes": 8,
+      "description": "First advice",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "comments": []
+    },
+    {
+      "id": 2,
+      "title": "Second Advice Blog",
+      "image": "path/to/image.jpg",
+      "minutes": 8,
+      "description": "First advice",
+      "content": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "comments": []
+    }
+  ]
