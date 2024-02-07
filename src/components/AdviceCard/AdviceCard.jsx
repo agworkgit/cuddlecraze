@@ -40,7 +40,9 @@ const AdviceCard = ({ advice }) => {
               <img src={adviceItem.image} alt={adviceItem.title} className="card-image" />
               <div className="card-info">
                 <h2 className="advice-title">{adviceItem.title}</h2>
+                <p className="advice-subtitle">{adviceItem.description}</p>
                 <p className="min-read">{adviceItem.minutes} min read</p>
+          
               </div>
             </Link>
             <div className="card-buttons">

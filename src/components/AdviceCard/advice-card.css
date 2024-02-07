@@ -14,7 +14,22 @@
   margin: 0 auto;
   padding: 0 !important;
 }
+.card-image {
+  width: 100%;
+  min-height: 250px; /* Minimum height */
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px; /* Add border radius to bottom-left corner */
+}
 
+
+.card-link {
+  color: var(--card-text-color); /* Set link color to --card-text-color */
+  text-decoration: none; /* Remove underline from links */
+  display: block; /* Make links block-level elements */
+  margin-bottom: 10px; /* Add margin between links */
+}
 .advice-card {
 
   width: 300px; /* Adjust card width as needed */
@@ -23,6 +38,13 @@
 }
 
 .advice-title {
+  color: var(--card-text-color);
+  text-align: center;
+  font-size: var(--description-size);
+  margin-block: 1rem;
+}
+
+.advice-subtitle {
   color: var(--card-text-color);
   text-align: center;
   font-size: var(--description-size);

@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "Importance of Regular Exercise for Dogs",
-        "image": "path/to/image1.jpg",
+        "image": "../../../../public/images/adviceData1.jpg",
         "minutes": 3,
         "description": "Regular exercise is crucial for your dog's health and happiness.",
         "paragraphs": {
@@ -18,7 +18,7 @@
     {
         "id": 2,
         "title": "Nutrition Tips for a Healthy Dog Diet",
-        "image": "path/to/image2.jpg",
+        "image": "../../../../public/images/adviceData2.jpg",
         "minutes": 3,
         "description": "Discover essential nutrition tips for your dog's health.",
         "paragraphs": {
@@ -35,7 +35,7 @@
     {
         "id": 3,
         "title": "Grooming Essentials: Keeping Your Dog Clean and Tidy",
-        "image": "path/to/image3.jpg",
+        "image": "../../../../public/images/adviceData3.jpg",
         "minutes": 4,
         "description": "Learn how to maintain your dog's hygiene with proper grooming techniques.",
         "paragraphs": {
@@ -53,7 +53,7 @@
     {
         "id": 4,
         "title": "Understanding Your Dog's Body Language",
-        "image": "path/to/image4.jpg",
+        "image": "../../../../public/images/adviceData4.jpg",
         "minutes": 3,
         "description": "Decode your dog's body language to better understand their needs and emotions.",
         "paragraphs": {
@@ -69,7 +69,7 @@
     {
         "id": 5,
         "title": "Creating a Safe Environment for Your Dog at Home",
-        "image": "path/to/image5.jpg",
+        "image": "../../../../public/images/adviceData5.jpg",
         "minutes": 3,
         "description": "Ensure your home is a safe and comfortable place for your dog.",
         "paragraphs": {
@@ -86,7 +86,7 @@
     {
         "id": 6,
         "title": "Training Basics: Teaching Your Dog Good Manners",
-        "image": "path/to/image6.jpg",
+        "image": "../../../../public/images/adviceData6.jpg",
         "minutes": 2,
         "description": "Learn essential training techniques to teach your dog obedience and manners.",
         "paragraphs": {
@@ -102,7 +102,7 @@
     {
         "id": 7,
         "title": "Socialization Tips: Helping Your Dog Interact with Others",
-        "image": "path/to/image7.jpg",
+        "image": "../../../../public/images/adviceData7.jpg",
         "minutes": 2,
         "description": "Discover how to socialize your dog effectively for positive interactions with people and other animals.",
         "paragraphs": {
@@ -122,7 +122,7 @@
     {
         "id": 8,
         "title": "Healthcare Essentials: Maintaining Your Dog's Wellness",
-        "image": "path/to/image8.jpg",
+        "image": "../../../../public/images/adviceData8.jpg",
         "minutes": 4,
         "description": "Learn about essential healthcare practices to keep your dog healthy and prevent illnesses.",
         "paragraphs": {

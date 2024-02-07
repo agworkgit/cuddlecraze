@@ -43,9 +43,10 @@ const BlogPost = ({ postData }) => {
         <div className="blog-post">
           <div className="blog-post-content">
             <div className="blog-post-image">
+            <h2 className="blog-post-title">{postData.title}</h2>
               <img src={postData.image} alt={postData.title} />
             </div>
-            <h2 className="blog-post-title">{postData.title}</h2>
+           
             <p className="blog-post-min-read">{postData.minutes} min read</p>
             <h3 className="blog-post-description">{postData.description}</h3>
             <div className="blog-post-paragraphs">{contentParagraphs}</div>
