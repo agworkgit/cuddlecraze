@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './BlogPost.css';
 import './advice-card.css';
-import FavouriteIconAdvice from './FavouriteIconAdvice';
+
 
 const BlogPost = ({ postData }) => {
   const [readStatus, setReadStatus] = useState({});
@@ -63,7 +63,7 @@ const BlogPost = ({ postData }) => {
               }`}
               onClick={toggleFavorite}
             >
-              {favorites.includes(postData.id) ? '💖 Added!' : '🤍 Add to favourite'}
+              {favorites.includes(postData.id) ? '💖 Added!' : '🤍 Add to favourites'}
             </button>
           </div>
         </div>

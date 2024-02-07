@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './advice-card.css';
-import FavouriteIconAdvice from './FavouriteIconAdvice';
+import './BlogPost.css';
 
 const AdviceCard = ({ advice }) => {
   const [readStatus, setReadStatus] = useState({});
-  const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState({});
 
   const toggleReadStatus = (id) => {
     setReadStatus((prevStatus) => ({
@@ -15,16 +15,15 @@ const AdviceCard = ({ advice }) => {
   };
 
   const toggleFavorite = (id) => {
-    setFavorites((prevFavorites) =>
-      prevFavorites.includes(id)
-        ? prevFavorites.filter((fav) => fav !== id)
-        : [...prevFavorites, id]
-    );
+    setFavorites((prevFavorites) => ({
+      ...prevFavorites,
+      [id]: !prevFavorites[id],
+    }));
   };
 
   return (
     <div>
-      <div className="section-border"></div> {/* Add this div with the section-border class */}
+      <div className="section-border"></div>
       <div className="advice-card-container">
         {advice.map((adviceItem) => (
           <div key={adviceItem.id} className="advice-card">
@@ -45,16 +44,25 @@ const AdviceCard = ({ advice }) => {
               </div>
             </Link>
             <div className="card-buttons">
+              <div className="blog-post-keywords">
+                {adviceItem.keywords.map((keyword, index) => (
+                  <button key={index} className="keyword-button">
+                    {keyword}
+                  </button>
+                ))}
+              </div>
               <button
-                className={`read-button ${readStatus[adviceItem.id] ? 'read' : ''}`}
+                className={`blog-post-read-button ${readStatus[adviceItem.id] ? 'read' : ''}`}
                 onClick={() => toggleReadStatus(adviceItem.id)}
               >
-                {readStatus[adviceItem.id] ? 'Mark as Unread' : 'Mark as Read'}
+                {readStatus[adviceItem.id] ? '✔️ Read!' : '📰 Mark as Read'}
               </button>
-              <FavouriteIconAdvice
-                isFavourite={favorites.includes(adviceItem.id)}
+              <button
+                className={`blog-post-fav-button ${favorites[adviceItem.id] ? 'fav' : 'addfav'}`}
                 onClick={() => toggleFavorite(adviceItem.id)}
-              />
+              >
+                {favorites[adviceItem.id] ? '💖 Added!' : '🤍 Add to favourites'}
+              </button>
             </div>
           </div>
         ))}

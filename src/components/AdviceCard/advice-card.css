@@ -6,30 +6,21 @@
   padding-top: 70px; /* Adjust this value according to your header height */
 }
 
-.card-overlay-list {
-  position: relative;
+.section-border {
+  background-color: var(--title-color);
+  height: 1.5px;
   width: 100%;
-  background-color: var(--card-color);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  margin-top: 20px; /* Add margin to separate cards */
-  max-width: 968px; /* Adjust as needed */
+  max-width: 968px;
+  margin: 0 auto;
+  padding: 0 !important;
 }
 
 .advice-card {
   width: 300px; /* Adjust card width as needed */
   margin: 0.5rem; /* Adjust margin between cards */
-}
-
-.section-border {
-  background-color: var(--title-color);
-  height: 1.5px;
-  width: 100vw;
-  max-width: 968px;
-  margin: 0 auto;
-  padding: 0 !important;
+  border: 1px solid #ccc; /* Add border to cards */
+  border-radius: 8px; /* Add border radius to cards */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow to cards */
 }
 
 .advice-title {
@@ -44,42 +35,64 @@
   height: 200px;
   object-fit: cover;
   object-position: center;
-}
-
-.advice-content {
-  margin: 0 10px; /* Add margin to content */
-}
-
-.advice-card-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+  border-top-left-radius: 8px; /* Add border radius to top-left corner */
+  border-top-right-radius: 8px; /* Add border radius to top-right corner */
 }
 
 .advice-buttons {
   display: flex;
+  justify-content: space-between; /* Space buttons evenly */
   align-items: center;
+  padding: 0 10px; /* Adjust padding */
 }
 
-.advice-button {
-  font-size: var(--buttons-tooltips);
-  padding: 5px 10px; /* Adjust padding as needed */
-  margin-right: 10px; /* Add margin between buttons */
+.keyword-button {
+  font-family: var(--description-font);
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 8px 16px;
+  background-color: #0a4c2c;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.read-tag {
-  font-size: 0.8em; /* Adjust font size for read tag */
-  padding: 0.2em 0.5em; /* Adjust padding for read tag */
-  border-radius: 3rem;
-  background-color: var(--paragraph-color);
-  color: white;
+.keyword-button:hover {
+  background-color: #0056b3;
 }
 
-.card-link {
-  color: var(--card-text-color); /* Set link color to --card-text-color */
-  text-decoration: none; /* Remove underline from links */
+.blog-post-read-button,
+.blog-post-fav-button.fav {
+  font-family: var(--description-font);
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #28a745;
+  color: #fff;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+.blog-post-fav-button.addfav {
+  font-family: var(--description-font);
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.blog-post-read-button.read {
+  background-color: #557d60;
+}
+
+.blog-post-fav-button.fav {
+  background-color: #557d60;
+}
+
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 992px) {
