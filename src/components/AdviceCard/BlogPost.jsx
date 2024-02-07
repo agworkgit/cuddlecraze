@@ -29,41 +29,43 @@ const BlogPost = ({ postData }) => {
     </p>
   ));
 
-// Render the keywords as buttons
-const keywordButtons = postData.keywords.map((keyword, index) => (
+  // Render the keywords as buttons
+  const keywordButtons = postData.keywords.map((keyword, index) => (
     <button key={index} className="keyword-button">
       {keyword}
     </button>
   ));
 
   return (
-    <div className="blog-post">
-      <div className="blog-post-image">
-        <img src={postData.image} alt={postData.title} />
-      </div>
-      <div className="blog-post-content">
-        <h2 className="blog-post-title">{postData.title}</h2>
-        <p className="blog-post-min-read">{postData.minutes} min read</p>
-        <p className="blog-post-description">{postData.description}</p>
-        <div className="blog-post-paragraphs">{contentParagraphs}</div>
-        <div className="blog-post-keywords">{keywordButtons}</div>
-        <div className="blog-post-buttons">
-          <button
-            className={`blog-post-read-button ${
-              readStatus[postData.id] ? 'read' : ''
-            }`}
-            onClick={toggleReadStatus}
-          >
-            {readStatus[postData.id] ? 'Mark as Unread' : 'Mark as Read'}
-          </button>
-          <button
-            className={`blog-post-fav-button ${
-              favorites.includes(postData.id) ? 'fav' : ''
-            }`}
-            onClick={toggleFavorite}
-          >
-            <span className="heart-icon"></span>
-          </button>
+    <div className="blog-post-container">
+      <div className="blog-post">
+        <div className="blog-post-content">
+          <div className="blog-post-image">
+            <img src={postData.image} alt={postData.title} />
+          </div>
+          <h2 className="blog-post-title">{postData.title}</h2>
+          <p className="blog-post-min-read">{postData.minutes} min read</p>
+          <p className="blog-post-description">{postData.description}</p>
+          <div className="blog-post-paragraphs">{contentParagraphs}</div>
+          <div className="blog-post-keywords">{keywordButtons}</div>
+          <div className="blog-post-buttons">
+            <button
+              className={`blog-post-read-button ${
+                readStatus[postData.id] ? 'read' : ''
+              }`}
+              onClick={toggleReadStatus}
+            >
+              {readStatus[postData.id] ? '✔️ Read!' : '📰 Mark as Read'}
+            </button>
+            <button
+              className={`blog-post-fav-button ${
+                favorites.includes(postData.id) ? 'fav' : ''
+              }`}
+              onClick={toggleFavorite}
+            >
+              {favorites.includes(postData.id) ? '💖 Added!' : '🤍 Add to favourite'}
+            </button>
+          </div>
         </div>
       </div>
     </div>

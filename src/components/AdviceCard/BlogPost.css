@@ -1,18 +1,25 @@
 .blog-post-container {
     display: flex;
     flex-direction: column;
-    max-width: 800px;
-    margin: 0 auto;
+    width: 968px; /* Adjust width as needed */
     padding: 20px;
+    margin: 0 auto;
+    margin-top: 68px;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
+  h2 {
+    font-family: var(--title-font);
+    font-size: var(--header-size) !important;
+    margin-bottom: 20px; /* Add margin between title and paragraphs */
+  }
+  
   .blog-post {
     display: flex;
     align-items: flex-start;
-    margin-top: 67px;
+    margin-top: 20px; /* Adjust margin as needed */
   }
   
   .post-image {
@@ -46,19 +53,21 @@
   .content-paragraph {
     margin-bottom: 10px;
     line-height: 1.6;
+    font-family: var(--description-font); /* Use the same font as paragraph */
   }
   
   .post-keywords {
     margin-top: 20px;
     display: flex;
-    flex-wrap: wrap; /* Ensure keywords wrap to new line */
+    flex-wrap: wrap;
   }
   
-  .post-keywords button {
+  .keyword-button {
+    font-family: var(--description-font);
     margin-right: 10px;
     margin-bottom: 10px;
     padding: 8px 16px;
-    background-color: #007bff;
+    background-color: #0a4c2c;
     color: #fff;
     border: none;
     border-radius: 20px;
@@ -66,28 +75,31 @@
     transition: background-color 0.3s ease;
   }
   
-  .post-keywords button:hover {
+  .keyword-button:hover {
     background-color: #0056b3;
   }
   
-  .post-actions {
+  .blog-post-buttons {
+    font-family: var(--description-font);
+    margin-top: 20px;
     display: flex;
     align-items: center;
-    margin-top: 20px;
   }
   
-  .read-button {
+  .blog-post-buttons button {
+    margin-right: 10px;
     padding: 8px 16px;
+    border-radius: 20px;
     background-color: #28a745;
     color: #fff;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: var(--description-font); /* Use the same font as paragraph */
   }
   
-  .read-button.read {
-    background-color: #dc3545;
+  .blog-post-buttons button.read {
+    background-color: #557d60;
   }
   
   .blog-post-fav-button {
@@ -103,38 +115,22 @@
     height: 20px;
     background-color: transparent;
     border: none;
-    background-image: url('heart-icon.png'); /* Replace with your heart icon image */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     transition: background-color 0.3s ease;
   }
   
-  .blog-post-fav-button.fav .heart-icon {
-    background-color: #ff0000;
+  .blog-post-fav-button.fav {
+    background-color:#557d60;;
   }
   
   .advice-card {
     background-color: var(--title-color);
     width: 80%;
-    margin: 20px auto;
+    margin: 20px auto; /* Adjust margin as needed */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(235, 233, 233, 0.1);
   }
   
-  @media screen and (max-width: 992px) {
-    /* Add CSS rules for max-width: 992px */
-  }
-  
-  @media screen and (max-width: 768px) {
-    /* Add CSS rules for max-width: 768px */
-  }
-  
-  @media screen and (max-width: 576px) {
-    /* Add CSS rules for max-width: 576px */
-  }
-  
-  @media screen and (max-width: 350px) {
-    /* Add CSS rules for max-width: 350px */
-  }
