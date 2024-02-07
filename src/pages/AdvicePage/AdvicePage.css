@@ -1,0 +1,22 @@
+.advice-container {
+    background-color: var(--title-color);
+    max-width: 968px;
+    margin: 0 auto; /* Center horizontally */
+  }
+  
+  /* Breakpoints */
+  @media screen and (max-width: 992px) {
+    /* Add CSS rules for max-width: 992px */
+  }
+  
+  @media screen and (max-width: 768px) {
+    /* Add CSS rules for max-width: 768px */
+  }
+  
+  @media screen and (max-width: 576px) {
+    /* Add CSS rules for max-width: 576px */
+  }
+  
+  @media screen and (max-width: 350px) {
+    /* Add CSS rules for max-width: 350px */
+  }

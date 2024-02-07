@@ -1,0 +1,129 @@
+.advice-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 968px;
+  align-items: center; /* Center horizontally */
+  padding-top: 70px; /* Adjust this value according to your header height */
+}
+
+.section-border {
+  background-color: var(--title-color);
+  height: 1.5px;
+  width: 100%;
+  max-width: 968px;
+  margin: 0 auto;
+  padding: 0 !important;
+}
+.card-image {
+  width: 100%;
+  min-height: 250px; /* Minimum height */
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px; /* Add border radius to bottom-left corner */
+}
+
+
+.card-link {
+  color: var(--card-text-color); /* Set link color to --card-text-color */
+  text-decoration: none; /* Remove underline from links */
+  display: block; /* Make links block-level elements */
+  margin-bottom: 10px; /* Add margin between links */
+}
+.advice-card {
+
+  width: 300px; /* Adjust card width as needed */
+  margin: 0.5rem; /* Adjust margin between cards */
+  border-radius: 8px; /* Add border radius to cards */
+}
+
+.advice-title {
+  color: var(--card-text-color);
+  text-align: center;
+  font-size: var(--description-size);
+  margin-block: 1rem;
+}
+
+.advice-subtitle {
+  color: var(--card-text-color);
+  text-align: center;
+  font-size: var(--description-size);
+  margin-block: 1rem;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 8px; /* Add border radius to top-left corner */
+  border-top-right-radius: 8px; /* Add border radius to top-right corner */
+}
+
+.advice-buttons {
+  display: flex;
+  justify-content: space-between; /* Space buttons evenly */
+  align-items: center;
+  padding: 0 10px; /* Adjust padding */
+}
+
+.keyword-button {
+  font-family: var(--description-font);
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 8px 16px;
+  background-color: #0a4c2c;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.keyword-button:hover {
+  background-color: #0056b3;
+}
+
+.blog-post-read-button,
+.blog-post-fav-button.fav {
+  font-family: var(--description-font);
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #28a745;
+  color: #fff;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.blog-post-fav-button.addfav {
+  font-family: var(--description-font);
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.blog-post-read-button.read {
+  background-color: #557d60;
+}
+
+.blog-post-fav-button.fav {
+  background-color: #557d60;
+}
+
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 992px) {
+  .advice-card {
+    width: 250px; /* Adjust card width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .advice-card {
+    width: 200px; /* Adjust card width for even smaller screens */
+  }
+}
