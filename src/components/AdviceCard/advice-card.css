@@ -16,11 +16,10 @@
 }
 
 .advice-card {
+
   width: 300px; /* Adjust card width as needed */
   margin: 0.5rem; /* Adjust margin between cards */
-  border: 1px solid #ccc; /* Add border to cards */
   border-radius: 8px; /* Add border radius to cards */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow to cards */
 }
 
 .advice-title {
