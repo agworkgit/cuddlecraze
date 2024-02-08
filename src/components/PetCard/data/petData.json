@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "Albert",
+        "location": "London",
+        "age": 8,
+        "image": "https://external-preview.redd.it/NTr2qd78cRi5Bhux4ByPOvyvzrqdUKXwdLS1EC39pOM.jpg?width=640&crop=smart&auto=webp&s=c98befedc37308560d92d72c5f5d807699f09a65",
+        "breed": "Corgi",
+        "specialRequirements": "Not very sociable",
+        "description": "Albert is a very cheerful corgi, looking for a new owner without other pets"
+    },
+    {
+        "id": 2,
+        "name": "Betsy",
+        "location": "London",
+        "age": 2,
+        "image": "https://www.dogsblog.com/wp-content/uploads/2023/08/Montyo.jpeg",
+        "breed": "Dachshund",
+        "specialRequirements": "Blind in left eye",
+        "description": "Betsy is a tiny Dachshund, full of life, but a little clumsy"
+    },
+    {
+        "id": 3,
+        "name": "Cosmo",
+        "location": "Essex",
+        "age": 6,
+        "image": "https://doggoneproblems.com/wp-content/uploads/2015/04/olaf.jpg?w=300",
+        "breed": "Golden Retriever",
+        "specialRequirements": "Gets lonely",
+        "description": "Cosmo was my mother's best friend. Since she passed, he needs a stay-at-home carer"
+    },
+    {
+        "id": 4,
+        "name": "Smudge",
+        "location": "London",
+        "age": 2,
+        "image": "https://adoptdog.in/wp-content/uploads/2022/09/Labrador-Dog-for-Adoption-in-Delhi.jpg",
+        "breed": "Labrador",
+        "specialRequirements": "Smudge is a bundle of energy. Rescued from the street, needs a stable home",
+        "description": "Frightens easily"
+    },
+    {
+        "id": 5,
+        "name": "Captain",
+        "location": "Essex",
+        "age": 9,
+        "image": "https://www.dogsblog.com/wp-content/uploads/2023/07/Jetq2-scaled.jpg",
+        "breed": "Spaniel",
+        "specialRequirements": "Missing a few teeth",
+        "description": "This is Captain. Needs a new home after current owners emigrating. Very friendly!"
+    },
+    {
+        "id": 6,
+        "name": "Lucy",
+        "location": "Manchester",
+        "age": 9,
+        "image": "https://i.pinimg.com/originals/5c/38/f0/5c38f0ebd93d3f211bf23d697903f302.jpg",
+        "breed": "Cockerpoo",
+        "specialRequirements": "Needs a LOT of walkies",
+        "description": "Lucy is a very good girl indeed. Hypoallergenic and in perfect health"
+    },
+    {
+        "id": 7,
+        "name": "Jingo",
+        "location": "London",
+        "age": 4,
+        "image": "https://www.tallahassee.com/gcdn/presto/2022/03/04/PTAL/598f602b-180d-473d-96d4-e0c9423b84dd-Puddin.jpg?width=660&height=719&fit=crop&format=pjpg&auto=webp",
+        "breed": "French Bulldog",
+        "specialRequirements": "Walks with a limp",
+        "description": "She may look grumpy, but Jingo has a heart of gold. Quite loud, but that's only because she feels protective"
+    },
+    {
+        "id": 8,
+        "name": "Mitsy & Pickle",
+        "location": "Bath",
+        "age": 3,
+        "image": "https://www.doggoneproblems.com/wp-content/uploads/2017/05/Regis-and-Bennett.jpg",
+        "breed": "Beagle",
+        "specialRequirements": "Can't be separated",
+        "description": "Mitzy (left) & Pickle (right) are brother and sister and totally devoted to each other. A lot of energy, and looking for one new owner to take both"
+    }
+]
