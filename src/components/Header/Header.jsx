@@ -5,6 +5,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import ReactSwitch from "react-switch";
 import "./header.css";
 
+
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const { toggleTheme, theme } = useContext(ThemeContext);
@@ -37,7 +38,7 @@ const Header = () => {
 
         <div className={isMenuOpen ? "nav-menu show-menu" : "nav-menu"}>
           <ul className="nav-list">
-          <li className="nav-item">
+            <li className="nav-item">
               <Link to="/" className="nav-link" onClick={() => { handleMenuClose(); }}>
                 <i className="bi bi-house nav-icon"></i> Home
               </Link>
@@ -66,9 +67,9 @@ const Header = () => {
                     </li>
 
                     <li className="nav-item">
-                      <ScrollLink to="services" className="nav-link" smooth="true" duration={200} onClick={() => { handleMenuClose(); }}>
+                      <Link to="/advice" className="nav-link" onClick={() => { handleMenuClose(); }}>
                         <i className="bi bi-briefcase nav-icon"></i> Advice
-                      </ScrollLink>
+                      </Link>
                     </li>
                   </>
                 )}
@@ -112,24 +113,24 @@ const Header = () => {
 
         <div className="nav-toggle" onClick={handleMenuToggle}>
           <p className="open-drawer">Menu</p>
-          
+
         </div>
 
         {/* Theme Toggle for Mobile */}
         <div className="switch-theme-mobile">
-            <ReactSwitch
-              onChange={toggleTheme}
-              checked={theme === "dark-mode"}
-              onColor="#FEFAE0"
-              offColor="#283618"
-              onHandleColor="#283618"
-              activeBoxShadow='0 0 2px 3px #3bf'
-              uncheckedIcon={false}
-              checkedIcon={false}
-              height={16}
-              width={30}
-            ></ReactSwitch>
-          </div>
+          <ReactSwitch
+            onChange={toggleTheme}
+            checked={theme === "dark-mode"}
+            onColor="#FEFAE0"
+            offColor="#283618"
+            onHandleColor="#283618"
+            activeBoxShadow='0 0 2px 3px #3bf'
+            uncheckedIcon={false}
+            checkedIcon={false}
+            height={16}
+            width={30}
+          ></ReactSwitch>
+        </div>
       </nav>
     </header>
   );

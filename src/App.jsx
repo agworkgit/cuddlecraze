@@ -1,5 +1,5 @@
-import './App.css'
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import './App.css';
+import { HashRouter as Router, Routes, Route, useParams } from "react-router-dom";
 import { createContext, useState, useEffect } from 'react';
 import Header from './components/Header/Header';
 import LandingPage from './pages/LandingPage/LandingPage';
@@ -8,6 +8,9 @@ import PetsPage from './pages/PetsPage/PetsPage';
 import AccountPage from './pages/AccountPage/AccountPage';
 import PetPage from './pages/PetPage/PetPage';
 
+import AdvicePageMain from "./pages/AdvicePage/AdvicePageMain";
+import BlogPost from './components/AdviceCard/BlogPost';
+import adviceData from './components/AdviceCard/data/advice-data.json';
 
 export const ThemeContext = createContext('dark-mode');
 
@@ -35,24 +38,24 @@ export const App = () => {
                 <>
                   <LandingPage />
                   {/* <Home />
-              <About id="about"/>
-              <Skills id="skills"/>
-              <Services id="services"/>
-              <Qualification id="qualifications"/>
-              <Testimonials id="testimonials"/>
-              <Footer /> */}
+                  <About id="about"/>
+                  <Skills id="skills"/>
+                  <Services id="services"/>
+                  <Qualification id="qualifications"/>
+                  <Testimonials id="testimonials"/>
+                  <Footer /> */}
                 </>
               }
             />
             {/* <Route
-          path="/contact"
-          element={
-            <>
-              <Contact id="contact" />
-              <Footer id="footer" />
-            </>
-          }
-        /> */}
+              path="/contact"
+              element={
+                <>
+                  <Contact id="contact" />
+                  <Footer id="footer" />
+                </>
+              }
+            /> */}
             <Route
               path="/login"
               element={
@@ -85,11 +88,30 @@ export const App = () => {
               </>
             }
             />
+            <Route
+            path="/advice"
+            element={
+               <>
+                <AdvicePageMain id="advice-page" />
+              </>
+              }
+            />
+            <Route
+              path="/advice/blog/:id"
+              element={<BlogPostContainer />}
+            />
           </Routes>
         </Router>
       </div>
     </ThemeContext.Provider>
-  )
-}
+  );
+};
 
-export default App
+const BlogPostContainer = () => {
+  const { id } = useParams();
+  const selectedPost = adviceData.find((post) => post.id === parseInt(id));
+
+  return <BlogPost postData={selectedPost} />;
+};
+
+export default App;
