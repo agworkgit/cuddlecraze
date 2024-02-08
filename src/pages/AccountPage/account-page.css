@@ -12,19 +12,48 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
-
-
-/* Breakpoints */
-@media screen and (max-width: 992px) {
-    .account-container {
-        padding-top: 6rem;
-        max-width: 79%;
-    }
-
-    .account-content {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+#account-page {
+    text-align: center;
+  }
+  
+  .section-buttons {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .section-buttons button {
+    background-color: var(--button-color);
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    flex: 1; /* Distribute space evenly */
+  }
+  
+  .profile-section {
+    margin-bottom: 20px;
+  }
+  
+  .profile-section .profile-details {
+    text-align: left;
+  }
+  
+  .profile-section .profile-details ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .profile-section .profile-details ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .profile-section .profile-details ul li:last-child {
+    margin-right: 0;
+  }
 
 @media screen and (max-width: 768px) {
     .account-container {
