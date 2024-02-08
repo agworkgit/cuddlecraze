@@ -6,6 +6,7 @@ function AccountHead() {
     const [isEditing, setIsEditing] = useState(false);
     const [profileData, setProfileData] = useState(AccountInfo); // State to manage profile data
     const [formData, setFormData] = useState({}); // State to manage form data
+    const [previewImage, setPreviewImage] = useState(null); // State to manage preview image
 
     // Function to handle edit profile button click
     const handleEditProfile = () => {
@@ -55,6 +56,7 @@ function AccountHead() {
     const handleCancelEdit = () => {
         setIsEditing(false); // Exit edit mode
         setFormData({}); // Clear form data
+        setPreviewImage(null); // Clear preview image
     };
 
     // Function to handle file input change
@@ -66,6 +68,7 @@ function AccountHead() {
                 ...prevData,
                 profile_picture: reader.result, // Update profile picture URL
             }));
+            setPreviewImage(reader.result); // Set preview image
         };
         if (file) {
             reader.readAsDataURL(file); // Read file as Data URL
@@ -75,8 +78,8 @@ function AccountHead() {
     return (
         <div className="account-head-container">
             <div className="profile-section">
-                <div className="profile-picture">
-                    <img src={profileData.profile_picture} alt="Profile Picture" />
+                <div className="profile-picture" onClick={() => isEditing && document.getElementById('profile-picture-upload').click()}>
+                    <img src={isEditing ? (previewImage || profileData.profile_picture) : profileData.profile_picture} alt="Profile Picture" />
                     {isEditing && (
                         <>
                             <input
@@ -84,11 +87,15 @@ function AccountHead() {
                                 id="profile-picture-upload"
                                 accept="image/*"
                                 onChange={handleFileInputChange}
+                                style={{ display: 'none' }} // Hide the input field
                             />
-                            <label htmlFor="profile-picture-upload">Upload Picture</label>
+                            <label htmlFor="profile-picture-upload">Change Picture</label>
                         </>
                     )}
                 </div>
+                {isEditing && (
+                    <button className="edit-btn" onClick={() => document.getElementById('profile-picture-upload').click()}>Edit Picture</button>
+                )}
                 <div className="profile-details">
                     <h2>Name: <span id="name">{isEditing ? (
                         <input
@@ -131,7 +138,7 @@ function AccountHead() {
                                         })}
                                         className="profile-input"
                                     />
-                                    <button type="button" className="remove-btn" onClick={() => handleRemoveInterestField(index)}>Remove</button>
+                                    <button type="button" className="remove-btn" onClick={() => handleRemoveInterestField(index)}>X</button>
                                 </div>
                             ))
                         ) : (
