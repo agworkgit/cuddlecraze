@@ -6,6 +6,8 @@ import LandingPage from './pages/LandingPage/LandingPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import PetsPage from './pages/PetsPage/PetsPage';
 import AccountPage from './pages/AccountPage/AccountPage';
+import PetPage from './pages/PetPage/PetPage';
+
 import AdvicePageMain from "./pages/AdvicePage/AdvicePageMain";
 import BlogPost from './components/AdviceCard/BlogPost';
 import adviceData from './components/AdviceCard/data/advice-data.json';
@@ -79,11 +81,19 @@ export const App = () => {
               }
             />
             <Route
-              path="/advice"
-              element={
-                <>
-                  <AdvicePageMain id="advice-page" />
-                </>
+            path="/pet-page"
+            element={
+              <>
+                <PetPage id="pet-page" />
+              </>
+            }
+            />
+            <Route
+            path="/advice"
+            element={
+               <>
+                <AdvicePageMain id="advice-page" />
+              </>
               }
             />
             <Route
