@@ -60,9 +60,9 @@ const Header = () => {
                     </li>
 
                     <li className="nav-item">
-                      <ScrollLink to="skills" className="nav-link" smooth="true" duration={200} onClick={() => { handleMenuClose(); }}>
+                      <Link to="/pet-page" className="nav-link" smooth="true" duration={200} onClick={() => { handleMenuClose(); }}>
                         <i className="bi bi-tools nav-icon"></i> Adopt
-                      </ScrollLink>
+                      </Link>
                     </li>
 
                     <li className="nav-item">

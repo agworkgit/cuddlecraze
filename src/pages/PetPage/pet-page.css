@@ -1,0 +1,88 @@
+/* .h1  */
+
+.pet-card {
+    background-color: var(--background-color);
+    /* height: 100vh; */
+    /* padding-top: 6rem; */
+    max-width: 968px;
+    margin: 0 auto;
+}
+
+/* .card-img-overlay {
+    im centre !important;
+} */
+
+.card-body {
+    color: var(--card-text-color);
+    font-size: var(--buttons-tooltips);
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    margin-bottom: var(--mb-3);
+    height: auto;
+    text-align: center;
+}
+
+.card-img {
+    padding-right: 50px !important;
+}
+
+img {
+    max-width: 50% !important;
+    height: 50% !important;
+}
+
+.card-bodyy {
+    color: var(--card-text-color);
+    font-size: var(--buttons-tooltips);
+    background-color: var(--card-color);
+    text-align: center;
+}
+
+/* .pet-content {
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+} */
+
+/* Breakpoints */
+@media screen and (max-width: 992px) {
+    .pet-container {
+        padding-top: 6rem;
+        max-width: 79%;
+    }
+
+    /* .pet-content {
+        grid-template-columns: repeat(2, 1fr);
+    } */
+}
+
+@media screen and (max-width: 768px) {
+    .pet-container {
+        max-width: 79%;
+    }
+
+    /* .pet-content { */
+        /* grid-template-columns: repeat(2, 1fr); */
+    /* } */
+}
+
+@media screen and (max-width: 576px) {
+    .pet-container {
+        padding-top: 2rem;
+        max-width: 79%;
+    }
+
+    .pet-content {
+        padding-top: 2rem;
+        /* grid-template-columns: repeat(1, 1fr); */
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .pet-content {
+        padding-top: 2rem;
+        /* grid-template-columns: repeat(1, 1fr); */
+    }
+}

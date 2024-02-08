@@ -6,6 +6,7 @@ import LandingPage from './pages/LandingPage/LandingPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import PetsPage from './pages/PetsPage/PetsPage';
 import AccountPage from './pages/AccountPage/AccountPage';
+import PetPage from './pages/PetPage/PetPage';
 
 
 export const ThemeContext = createContext('dark-mode');
@@ -75,6 +76,14 @@ export const App = () => {
                   <PetsPage id="pets-page" />
                 </>
               }
+            />
+            <Route
+            path="/pet-page"
+            element={
+              <>
+                <PetPage id="pet-page" />
+              </>
+            }
             />
           </Routes>
         </Router>
