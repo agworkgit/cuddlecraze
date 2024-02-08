@@ -1,7 +1,7 @@
 import './pet-card.css'
 import FavouriteIcon from '../PetCard/FavouriteIcon';
 
-function PetCard() {
+function PetCard(props) {
     return (
         <div className="pet-card">
             <div className="pet-content grid">
@@ -9,19 +9,19 @@ function PetCard() {
                     <div className="pet-card">
                         <div>
                         
-                            <img className="card-image" src="./images/stella.jpg" alt="Betsy" />
+                            <img className="card-image" src={ props.image } alt= { props.name } />
                             <div className="card-overlay-list">
-                                <p className="rezerved-tag">Rezerved</p>
+                                <p className="rezerved-tag">Reserved</p>
                                 <div className='pet-card-info'>
-                                <h1 className="pet-title">Pet Name</h1>
-                                <p className='pet-location'>Location: <span className='pet-location'>London</span></p>
+                                <h1 className="pet-title">{ props.name }</h1>
+                                <p className='pet-location'>Location: <span className='pet-location'>{ props.location }</span></p>
                                 <button className='button pet-card-button'>Adopt</button>
                                 </div>
-                                <p className="pet-subtitle">Our top start this month is none other than this charming fella.</p>
+                                <p className="pet-subtitle"> { props.description} </p>
                                 <div className='pet-card-tags'>
-                                    <span className='breed-tag'>Crossbreed</span>
-                                    <span className='preference-tag'>Can live with dogs</span>
-                                    <span className='support-tag'>Needs some support</span>
+                                    <span className='breed-tag'>{ props.breed }</span>
+                                    <span className='preference-tag'>{ props.age } years old</span>
+                                    <span className='support-tag'>{ props.specialRequirements }</span>
                                 </div>
                                 <FavouriteIcon />
                             </div>
