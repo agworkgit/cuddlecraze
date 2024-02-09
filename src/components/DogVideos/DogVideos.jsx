@@ -33,13 +33,13 @@ function DogVideos() {
 
   return (
     <div>
-      <div className="videoContainerVertical">
+      {/* <div className="videoContainerVertical">
         <h3>Helpful Videos</h3>
         <iframe src="//youtube.com/embed/Jk5PpPH9AN8"></iframe>
         <iframe src="//youtube.com/embed/-j3PkeNiR0E"></iframe>
         <iframe src="//youtube.com/embed/NvGErwd1Nbs"></iframe>
       </div>
-      <br></br>
+      <br></br> */}
       <br></br>
       <div className='videoContainerHorizontal'>
         <h3>Helpful Videos</h3>
