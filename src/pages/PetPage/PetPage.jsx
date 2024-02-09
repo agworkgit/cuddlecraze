@@ -3,6 +3,8 @@ import PetCard from '../../components/PetCard/PetCard';
 import Footer from '../../components/Footer/Footer';
 import SectionBorder from '../../components/SectionBorder/SectionBorder';
 import PetProfile from './PetPageCard';
+import DogVideos from '../../components/DogVideos/DogVideos'
+import DogFacts from '../../components/DogFacts/DogFacts';
 
 function PetPage() {
     return (
@@ -10,6 +12,14 @@ function PetPage() {
             <div>
                 <PetProfile />
             </div>
+            <div>
+                <DogVideos />
+            </div>
+            <br></br>
+            <div>
+                <DogFacts />
+            </div>
+            <br></br>
             <SectionBorder/>
             <Footer />
         </div>

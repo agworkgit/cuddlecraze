@@ -7,12 +7,12 @@ function PetProfile() {
             <div className='pet-card-item'>
                 <div className="pet-card">
                     <div>
-                        <div className="card">
+                        <div className="cardd">
                             <div className="card-bodyy">
                                 <p><h1>Stella</h1></p>
                             </div>
                         </div>
-                        <div className="card text-bg-dark">
+                        <div className="cardd text-bg-dark">
                             <img src="./images/stella.jpg" class="card-img" alt="..."/>
                                 <div className="card-img-overlay">
                                     <h5 className="card-title">This is Stella</h5>
@@ -22,7 +22,7 @@ function PetProfile() {
                                 </div>
                         </div>
 
-                        <div className="card">
+                        <div className="card-pet">
                             <div className="card-body">
                                 <p><h1>Adoption</h1></p>
                                 <p>Stella has been here for a week so far, she has had all her jabs.</p>
