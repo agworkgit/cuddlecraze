@@ -4,15 +4,16 @@
     padding-top: 6rem;
     max-width: 968px;
     margin: 0 auto;
-}
-
-.account-content {
+  }
+  
+  .account-content {
     padding-top: 1rem;
     padding-bottom: 4rem;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-}
-#account-page {
+  }
+  
+  #account-page {
     text-align: center;
   }
   
@@ -31,6 +32,10 @@
     border: none;
     cursor: pointer;
     flex: 1; /* Distribute space evenly */
+  }
+  
+  .section-buttons button:focus {
+    outline: none;
   }
   
   .profile-section {
@@ -54,32 +59,32 @@
   .profile-section .profile-details ul li:last-child {
     margin-right: 0;
   }
-
-@media screen and (max-width: 768px) {
+  
+  @media screen and (max-width: 768px) {
     .account-container {
-        max-width: 79%;
+      max-width: 79%;
     }
-
+  
     .account-content {
-        grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
-}
-
-@media screen and (max-width: 576px) {
+  }
+  
+  @media screen and (max-width: 576px) {
     .account-container {
-        padding-top: 2rem;
-        max-width: 79%;
+      padding-top: 2rem;
+      max-width: 79%;
     }
-
+  
     .account-content {
-        padding-top: 2rem;
-        grid-template-columns: repeat(1, 1fr);
+      padding-top: 2rem;
+      grid-template-columns: repeat(1, 1fr);
     }
-}
-
-@media screen and (max-width: 350px) {
+  }
+  
+  @media screen and (max-width: 350px) {
     .account-content {
-        padding-top: 2rem;
-        grid-template-columns: repeat(1, 1fr);
+      padding-top: 2rem;
+      grid-template-columns: repeat(1, 1fr);
     }
-}
+  }
