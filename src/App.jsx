@@ -6,7 +6,9 @@ import LandingPage from './pages/LandingPage/LandingPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import PetsPage from './pages/PetsPage/PetsPage';
 import AccountPage from './pages/AccountPage/AccountPage';
-import AdvicePageMain from './pages/AdvicePage/AdvicePageMain';
+import PetPage from './pages/PetPage/PetPage';
+
+import AdvicePageMain from "./pages/AdvicePage/AdvicePageMain";
 import BlogPost from './components/AdviceCard/BlogPost';
 import adviceData from './components/AdviceCard/data/advice-data.json';
 
@@ -31,12 +33,74 @@ export const App = () => {
         <Router>
           <Header />
           <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/account-page" element={<AccountPage />} />
-            <Route path="/pets-page" element={<PetsPage />} />
-            <Route path="/advice" element={<AdvicePageMain />} />
-            <Route path="/advice/blog/:id" element={<BlogPostContainer />} />
+            <Route
+              path="/"
+              element={
+                <>
+                  <LandingPage />
+                  {/* <Home />
+                  <About id="about"/>
+                  <Skills id="skills"/>
+                  <Services id="services"/>
+                  <Qualification id="qualifications"/>
+                  <Testimonials id="testimonials"/>
+                  <Footer /> */}
+                </>
+              }
+            />
+            {/* <Route
+              path="/contact"
+              element={
+                <>
+                  <Contact id="contact" />
+                  <Footer id="footer" />
+                </>
+              }
+            /> */}
+            <Route
+              path="/login"
+              element={
+                <>
+                  <LoginPage id="login" />
+                </>
+              }
+            />
+            <Route
+              path="/account-page"
+              element={
+                <>
+                  <AccountPage id="account-page" />
+                </>
+              }
+            />
+            <Route
+              path="/pets-page"
+              element={
+                <>
+                  <PetsPage id="pets-page" />
+                </>
+              }
+            />
+            <Route
+            path="/pet-page"
+            element={
+              <>
+                <PetPage id="pet-page" />
+              </>
+            }
+            />
+            <Route
+            path="/advice"
+            element={
+               <>
+                <AdvicePageMain id="advice-page" />
+              </>
+              }
+            />
+            <Route
+              path="/advice/blog/:id"
+              element={<BlogPostContainer />}
+            />
           </Routes>
         </Router>
       </div>
