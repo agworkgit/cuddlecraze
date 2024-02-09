@@ -76,12 +76,7 @@ const AdviceCard = ({ advice }) => {
                   </button>
                 ))}
               </div>
-              <button
-                className={`blog-post-read-button ${readStatus[adviceItem.id] ? 'read' : ''}`}
-                onClick={() => toggleReadStatus(adviceItem.id)}
-              >
-                {readStatus[adviceItem.id] ? '✔️ Read!' : '📰 Mark as Read'}
-              </button>
+            
               <button
                 className={`blog-post-fav-button ${favorites[adviceItem.id] ? 'fav' : 'addfav'}`}
                 onClick={() => toggleFavorite(adviceItem.id)}

@@ -71,14 +71,7 @@ const BlogPost = ({ postData }) => {
             <div className="blog-post-paragraphs">{contentParagraphs}</div>
             <div className="blog-post-keywords">{keywordButtons}</div>
             <div className="blog-post-buttons">
-              <button
-                className={`blog-post-read-button ${
-                  readStatus[postData.id] ? 'read' : ''
-                }`}
-                onClick={() => toggleReadStatus(postData.id)}
-              >
-                {readStatus[postData.id] ? '✔️ Read!' : '📰 Mark as Read'}
-              </button>
+        
               <button
                 className={`blog-post-fav-button ${
                   favorites ? 'fav' : ''
