@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './advice-card.css';
 import './BlogPost.css';
@@ -21,6 +21,19 @@ const AdviceCard = ({ advice }) => {
     }));
   };
 
+  useEffect(() => {
+    // Fetch favorited data from local storage
+    const favoritedData = localStorage.getItem('favoritedData');
+    if (favoritedData) {
+      setFavorites(JSON.parse(favoritedData));
+    }
+  }, []);
+
+  useEffect(() => {
+    // Update local storage when favorites state changes
+    localStorage.setItem('favoritedData', JSON.stringify(favorites));
+  }, [favorites]);
+
   return (
     <div>
       <div className="section-border"></div>
@@ -42,7 +55,6 @@ const AdviceCard = ({ advice }) => {
                 <h2 className="advice-title">{adviceItem.title}</h2>
                 <p className="advice-subtitle">{adviceItem.description}</p>
                 <p className="min-read">{adviceItem.minutes} min read</p>
-          
               </div>
             </Link>
             <div className="card-buttons">
