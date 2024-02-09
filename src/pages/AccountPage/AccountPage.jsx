@@ -7,28 +7,28 @@ import AccountFavourite from '../../components/AccountFavourite/AccountFavourite
 import AccountAdopted from '../../components/AccountAdopted/AccountAdopted';
 
 function AccountPage() {
-    const [activeSection, setActiveSection] = useState('account'); // 'account', 'favorites', 'adopted'
+  const [activeSection, setActiveSection] = useState('account'); // 'account', 'favorites', 'adopted'
 
-    const handleSectionChange = (section) => {
-        setActiveSection(section);
-    };
+  const handleSectionChange = (section) => {
+    setActiveSection(section);
+  };
 
-    return (
-        <div id="account-page" className='account-container'>
-            <div className="section-buttons">
-                <button className="btn-primary" onClick={() => handleSectionChange('account')}>My Account</button>
-                <button className="btn-primary" onClick={() => handleSectionChange('favorites')}>Favorites</button>
-                <button className="btn-primary" onClick={() => handleSectionChange('adopted')}>Adopted</button>
-            </div>
-            <div className='account-content grid'>
-                {activeSection === 'account' && <AccountHead />}
-                {activeSection === 'favorites' && <AccountFavourite />}
-                {activeSection === 'adopted' && <AccountAdopted />}
-            </div>
-            <SectionBorder />
-            <Footer />
-        </div>
-    );
+  return (
+    <div id="account-page" className='account-container'>
+      <div className="section-buttons">
+        <button className="btn-primary" onClick={() => handleSectionChange('account')}>My Account</button>
+        <button className="btn-primary" onClick={() => handleSectionChange('favorites')}>Favorites</button>
+        <button className="btn-primary" onClick={() => handleSectionChange('adopted')}>Adopted</button>
+      </div>
+      <div className='account-content grid'>
+        {activeSection === 'account' && <AccountHead />}
+        {activeSection === 'favorites' && <AccountFavourite />}
+        {activeSection === 'adopted' && <AccountAdopted />}
+      </div>
+      <SectionBorder />
+      <Footer />
+    </div>
+  );
 }
 
 export default AccountPage;

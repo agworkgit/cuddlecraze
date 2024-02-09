@@ -11,7 +11,7 @@ app.put('/api/favorites/:id', (req, res) => {
   const { favorites } = req.body;
 
   // Read the JSON file
-  const jsonData = fs.readFileSync('./path/to/your/json/file.json', 'utf8');
+  const jsonData = fs.readFileSync('./src/components/AdviceCard/data/advice-data.json', 'utf8');
   const data = JSON.parse(jsonData);
 
   // Update the favorites attribute in the JSON data
@@ -26,9 +26,27 @@ app.put('/api/favorites/:id', (req, res) => {
   });
 
   // Write the updated JSON data back to the file
-  fs.writeFileSync('./src//components/AdviceCard/data/advice-data.json', JSON.stringify(updatedData));
+  fs.writeFileSync('./src/components/AccountHead/AccountInfo.json', JSON.stringify(updatedData));
 
   res.json({ success: true });
+});
+
+// API endpoint for updating the profile
+app.put('/api/updateProfile', async (req, res) => {
+    try {
+        // Extract updated profile data from the request body
+        const updatedProfileData = req.body;
+
+        // Write the updated profile data to the JSON file
+        await fs.writeFileSync('./src/components/AccountHead/AccountInfo.json', JSON.stringify(updatedProfileData, null, 2));
+
+        // Send a success response with the updated profile data
+        res.json(updatedProfileData);
+    } catch (error) {
+        // Send an error response if something went wrong
+        console.error('Error updating profile:', error);
+        res.status(500).json({ error: 'Failed to update profile' });
+    }
 });
 
 // Start the server

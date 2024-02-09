@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AccountInfo from './AccountInfo.json'; // Import the JSON file
 import './account-head.css';
 
@@ -7,6 +7,14 @@ function AccountHead() {
     const [profileData, setProfileData] = useState(AccountInfo); // State to manage profile data
     const [formData, setFormData] = useState({}); // State to manage form data
     const [previewImage, setPreviewImage] = useState(null); // State to manage preview image
+
+    // Load existing profile data from local storage when component mounts
+    useEffect(() => {
+        const storedProfileData = localStorage.getItem('profileData');
+        if (storedProfileData) {
+            setProfileData(JSON.parse(storedProfileData));
+        }
+    }, []);
 
     // Function to handle edit profile button click
     const handleEditProfile = () => {
@@ -47,8 +55,8 @@ function AccountHead() {
         e.preventDefault();
         setProfileData(formData); // Update profile data with form data
         setIsEditing(false); // Exit edit mode
-        // You can add code here to save the updated profile data to the JSON file or any backend/database
-        // For simplicity, let's just log the updated data in this example
+        // Save the updated profile data to local storage
+        localStorage.setItem('profileData', JSON.stringify(formData));
         console.log('Updated Profile Data:', formData);
     };
 
