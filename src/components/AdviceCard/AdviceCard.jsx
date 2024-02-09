@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './advice-card.css';
 import './BlogPost.css';
@@ -14,12 +14,35 @@ const AdviceCard = ({ advice }) => {
     }));
   };
 
-  const toggleFavorite = (id) => {
-    setFavorites((prevFavorites) => ({
-      ...prevFavorites,
-      [id]: !prevFavorites[id],
-    }));
+  const toggleFavorite = (postId) => {
+    setFavorites((prevFavorites) => {
+      const updatedFavorites = { ...prevFavorites };
+      if (updatedFavorites[postId]) {
+        delete updatedFavorites[postId];
+      } else {
+        updatedFavorites[postId] = true;
+      }
+      localStorage.setItem('favoritedData', JSON.stringify(updatedFavorites));
+      return updatedFavorites;
+    });
   };
+
+  useEffect(() => {
+    const favoritedData = localStorage.getItem('favoritedData');
+    if (favoritedData) {
+      setFavorites(JSON.parse(favoritedData));
+    }
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const favoritedData = localStorage.getItem('favoritedData');
+      if (favoritedData) {
+        setFavorites(JSON.parse(favoritedData));
+      }
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div>
@@ -31,7 +54,8 @@ const AdviceCard = ({ advice }) => {
               to={{
                 pathname: `/advice/blog/${adviceItem.id}`,
                 state: {
-                  ...adviceItem, // Pass all properties from the adviceItem object
+                  ...adviceItem,
+                  // Pass all properties from the adviceItem object
                 },
               }}
               className="card-link"
@@ -42,7 +66,6 @@ const AdviceCard = ({ advice }) => {
                 <h2 className="advice-title">{adviceItem.title}</h2>
                 <p className="advice-subtitle">{adviceItem.description}</p>
                 <p className="min-read">{adviceItem.minutes} min read</p>
-          
               </div>
             </Link>
             <div className="card-buttons">
@@ -53,12 +76,7 @@ const AdviceCard = ({ advice }) => {
                   </button>
                 ))}
               </div>
-              <button
-                className={`blog-post-read-button ${readStatus[adviceItem.id] ? 'read' : ''}`}
-                onClick={() => toggleReadStatus(adviceItem.id)}
-              >
-                {readStatus[adviceItem.id] ? '✔️ Read!' : '📰 Mark as Read'}
-              </button>
+            
               <button
                 className={`blog-post-fav-button ${favorites[adviceItem.id] ? 'fav' : 'addfav'}`}
                 onClick={() => toggleFavorite(adviceItem.id)}

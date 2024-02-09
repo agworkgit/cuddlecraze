@@ -1,5 +1,5 @@
 import './App.css';
-import { HashRouter as Router, Routes, Route, useParams } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, useParams } from 'react-router-dom';
 import { createContext, useState, useEffect } from 'react';
 import Header from './components/Header/Header';
 import LandingPage from './pages/LandingPage/LandingPage';
@@ -19,7 +19,8 @@ export const App = () => {
   const [theme, setTheme] = useState(storedTheme);
 
   const toggleTheme = () => {
-    setTheme((current) => (current === 'dark-mode' ? 'light-mode' : 'dark-mode'));
+    const newTheme = theme === 'dark-mode' ? 'light-mode' : 'dark-mode';
+    setTheme(newTheme);
   };
 
   useEffect(() => {
@@ -28,8 +29,8 @@ export const App = () => {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className='App' id={theme}>
-        <Router basename="/">
+      <div className={`App ${theme}`} id={theme}>
+        <Router>
           <Header />
           <Routes>
             <Route
@@ -109,7 +110,7 @@ export const App = () => {
 
 const BlogPostContainer = () => {
   const { id } = useParams();
-  const selectedPost = adviceData.find((post) => post.id === parseInt(id));
+  const selectedPost = adviceData.find(post => post.id === parseInt(id));
 
   return <BlogPost postData={selectedPost} />;
 };
