@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './BlogPost.css';
 import './advice-card.css';
 import Footer from '../../components/Footer/Footer';
@@ -6,36 +6,56 @@ import SectionBorder from '../../components/SectionBorder/SectionBorder';
 
 const BlogPost = ({ postData }) => {
   const [readStatus, setReadStatus] = useState({});
-  const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState(false);
 
-  const toggleReadStatus = () => {
+  const toggleReadStatus = (id) => {
     setReadStatus((prevStatus) => ({
       ...prevStatus,
-      [postData.id]: !prevStatus[postData.id],
+      [id]: !prevStatus[id],
     }));
   };
 
   const toggleFavorite = () => {
-    setFavorites((prevFavorites) =>
-      prevFavorites.includes(postData.id)
-        ? prevFavorites.filter((fav) => fav !== postData.id)
-        : [...prevFavorites, postData.id]
-    );
+    setFavorites((prevFavorites) => !prevFavorites);
   };
 
-  // Render the content paragraphs
+  useEffect(() => {
+    const favoritedData = localStorage.getItem('favoritedData');
+    if (favoritedData) {
+      setFavorites(JSON.parse(favoritedData));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('favoritedData', JSON.stringify(favorites));
+  }, [favorites]);
+
+  useEffect(() => {
+    const jsonData = JSON.stringify({ readStatus });
+    localStorage.setItem('jsonData', jsonData);
+  }, [readStatus]);
+
   const contentParagraphs = Object.keys(postData.paragraphs).map((key) => (
     <p key={key} className="content-paragraph">
       {postData.paragraphs[key]}
     </p>
   ));
 
-  // Render the keywords as buttons
   const keywordButtons = postData.keywords.map((keyword, index) => (
     <button key={index} className="keyword-button">
       {keyword}
     </button>
   ));
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const favoritedData = localStorage.getItem('favoritedData');
+      if (favoritedData) {
+        setFavorites(JSON.parse(favoritedData));
+      }
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -43,10 +63,9 @@ const BlogPost = ({ postData }) => {
         <div className="blog-post">
           <div className="blog-post-content">
             <div className="blog-post-image">
-            <h2 className="blog-post-title">{postData.title}</h2>
+              <h2 className="blog-post-title">{postData.title}</h2>
               <img src={postData.image} alt={postData.title} />
             </div>
-           
             <p className="blog-post-min-read">{postData.minutes} min read</p>
             <h3 className="blog-post-description">{postData.description}</h3>
             <div className="blog-post-paragraphs">{contentParagraphs}</div>
@@ -56,17 +75,17 @@ const BlogPost = ({ postData }) => {
                 className={`blog-post-read-button ${
                   readStatus[postData.id] ? 'read' : ''
                 }`}
-                onClick={toggleReadStatus}
+                onClick={() => toggleReadStatus(postData.id)}
               >
                 {readStatus[postData.id] ? '✔️ Read!' : '📰 Mark as Read'}
               </button>
               <button
                 className={`blog-post-fav-button ${
-                  favorites.includes(postData.id) ? 'fav' : ''
+                  favorites ? 'fav' : ''
                 }`}
                 onClick={toggleFavorite}
               >
-                {favorites.includes(postData.id) ? '💖 Added!' : '🤍 Add to favourites'}
+                {favorites ? '💖 Added!' : '🤍 Add to favourites'}
               </button>
             </div>
           </div>

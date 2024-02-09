@@ -14,15 +14,20 @@ const AdviceCard = ({ advice }) => {
     }));
   };
 
-  const toggleFavorite = (id) => {
-    setFavorites((prevFavorites) => ({
-      ...prevFavorites,
-      [id]: !prevFavorites[id],
-    }));
+  const toggleFavorite = (postId) => {
+    setFavorites((prevFavorites) => {
+      const updatedFavorites = { ...prevFavorites };
+      if (updatedFavorites[postId]) {
+        delete updatedFavorites[postId];
+      } else {
+        updatedFavorites[postId] = true;
+      }
+      localStorage.setItem('favoritedData', JSON.stringify(updatedFavorites));
+      return updatedFavorites;
+    });
   };
 
   useEffect(() => {
-    // Fetch favorited data from local storage
     const favoritedData = localStorage.getItem('favoritedData');
     if (favoritedData) {
       setFavorites(JSON.parse(favoritedData));
@@ -30,9 +35,14 @@ const AdviceCard = ({ advice }) => {
   }, []);
 
   useEffect(() => {
-    // Update local storage when favorites state changes
-    localStorage.setItem('favoritedData', JSON.stringify(favorites));
-  }, [favorites]);
+    const interval = setInterval(() => {
+      const favoritedData = localStorage.getItem('favoritedData');
+      if (favoritedData) {
+        setFavorites(JSON.parse(favoritedData));
+      }
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div>
@@ -44,7 +54,8 @@ const AdviceCard = ({ advice }) => {
               to={{
                 pathname: `/advice/blog/${adviceItem.id}`,
                 state: {
-                  ...adviceItem, // Pass all properties from the adviceItem object
+                  ...adviceItem,
+                  // Pass all properties from the adviceItem object
                 },
               }}
               className="card-link"
