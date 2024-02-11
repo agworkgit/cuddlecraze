@@ -1,11 +1,13 @@
 import './App.css';
-import { HashRouter as Router, Routes, Route, useParams } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, useParams } from 'react-router-dom';
 import { createContext, useState, useEffect } from 'react';
 import Header from './components/Header/Header';
 import LandingPage from './pages/LandingPage/LandingPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import PetsPage from './pages/PetsPage/PetsPage';
 import AccountPage from './pages/AccountPage/AccountPage';
+import PetPage from './pages/PetPage/PetPage';
+
 import AdvicePageMain from "./pages/AdvicePage/AdvicePageMain";
 import BlogPost from './components/AdviceCard/BlogPost';
 import adviceData from './components/AdviceCard/data/advice-data.json';
@@ -17,7 +19,8 @@ export const App = () => {
   const [theme, setTheme] = useState(storedTheme);
 
   const toggleTheme = () => {
-    setTheme((current) => (current === 'dark-mode' ? 'light-mode' : 'dark-mode'));
+    const newTheme = theme === 'dark-mode' ? 'light-mode' : 'dark-mode';
+    setTheme(newTheme);
   };
 
   useEffect(() => {
@@ -26,8 +29,8 @@ export const App = () => {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className='App' id={theme}>
-        <Router basename="/">
+      <div className={`App ${theme}`} id={theme}>
+        <Router>
           <Header />
           <Routes>
             <Route
@@ -79,11 +82,19 @@ export const App = () => {
               }
             />
             <Route
-              path="/advice"
-              element={
-                <>
-                  <AdvicePageMain id="advice-page" />
-                </>
+            path="/pet-page"
+            element={
+              <>
+                <PetPage id="pet-page" />
+              </>
+            }
+            />
+            <Route
+            path="/advice"
+            element={
+               <>
+                <AdvicePageMain id="advice-page" />
+              </>
               }
             />
             <Route
@@ -99,7 +110,7 @@ export const App = () => {
 
 const BlogPostContainer = () => {
   const { id } = useParams();
-  const selectedPost = adviceData.find((post) => post.id === parseInt(id));
+  const selectedPost = adviceData.find(post => post.id === parseInt(id));
 
   return <BlogPost postData={selectedPost} />;
 };
