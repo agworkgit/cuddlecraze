@@ -1,11 +1,14 @@
 import petData from '../../components/PetCard/data/petData.json';
 import { useState } from 'react';
 import PetCard from '../../components/PetCard/PetCard';
+import { Link } from 'react-router-dom';
+import React from 'react';
 
-function SearchFilters() {
+const SearchFilters = function() {
     const [selectedBreed, setSelectedBreed] = useState(petData);
     const [selectedLocation, setSelectedLocation] = useState(petData);
-  
+
+    //filter functionality -------------------------
     const allBreeds = new Set(petData.breed)
     const allLocations = new Set(petData.location)
 
@@ -16,16 +19,14 @@ function SearchFilters() {
 
     const breedSet = new Set(petData.map((p) => p.breed));
     const breedsNoRepeat = Array.from(breedSet).sort();
-
     const locationSet = new Set(petData.map((p) => p.location));
     const locationsNoRepeat = Array.from(locationSet).sort();
-
-    console.log(filteredDogs)
 
     const clearFilters = () => {
     setSelectedBreed(petData)
     setSelectedLocation(petData)
     }
+    //------------------------------------------------
     return (
         <div>
         
@@ -57,7 +58,16 @@ function SearchFilters() {
 
         <div id="pets-content" className='pets-content grid'>
             {filteredDogs.map((item) => (
-                <PetCard key={item.id} item={item} />
+            <Link 
+                to="pet-page/"
+                onClick={() => {localStorage.setItem("selectedDog", JSON.stringify(item))
+                }}
+            >
+                <PetCard 
+                    key={item.id} 
+                    item={item}
+                    />
+                </Link>
             ))}
         </div>
     </div>
