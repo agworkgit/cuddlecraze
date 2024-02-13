@@ -5,9 +5,10 @@ import SectionBorder from '../../components/SectionBorder/SectionBorder';
 import AccountHead from '../../components/AccountHead/AccountHead';
 import AccountFavourite from '../../components/AccountFavourite/AccountFavourite';
 import AccountAdopted from '../../components/AccountAdopted/AccountAdopted';
+import AddPetListing from '../../components/AccountAddPet/AddPetListing'; // Import AddPetListing component
 
 function AccountPage() {
-  const [activeSection, setActiveSection] = useState('account'); // 'account', 'favorites', 'adopted'
+  const [activeSection, setActiveSection] = useState('account');
 
   const handleSectionChange = (section) => {
     setActiveSection(section);
@@ -19,11 +20,13 @@ function AccountPage() {
         <button className="btn-primary" onClick={() => handleSectionChange('account')}>My Account</button>
         <button className="btn-primary" onClick={() => handleSectionChange('favorites')}>Favorites</button>
         <button className="btn-primary" onClick={() => handleSectionChange('adopted')}>Adopted</button>
+        <button className="btn-primary" onClick={() => handleSectionChange('add-pet')}>Add Pet</button> {/* Button to show AddPetListing */}
       </div>
       <div className='account-content grid'>
         {activeSection === 'account' && <AccountHead />}
         {activeSection === 'favorites' && <AccountFavourite />}
         {activeSection === 'adopted' && <AccountAdopted />}
+        {activeSection === 'add-pet' && <AddPetListing />} {/* Conditionally render AddPetListing component */}
       </div>
       <SectionBorder />
       <Footer />
