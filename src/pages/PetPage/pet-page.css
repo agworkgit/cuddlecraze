@@ -12,6 +12,11 @@
     im centre !important;
 } */
 
+.card-img {
+    display: flex;
+    justify-content: center;
+}
+
 .cardd {
         --bs-card-spacer-y: 1rem;
         --bs-card-spacer-x: 1rem;
@@ -57,14 +62,12 @@
     text-align: center;
 }
 
-.card-img {
-    padding-right: 50px !important;
-}
-
-img {
+/* img {
     max-width: 50% !important;
     height: 50% !important;
-}
+    display: flex;
+    justify-content: center;
+} */
 
 .card-bodyy {
     color: var(--card-text-color);
