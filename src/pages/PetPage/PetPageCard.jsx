@@ -1,5 +1,5 @@
 import './pet-page.css'
-
+import ConnectionEmail from '../../components/ConnectionEmail/ConnectionEmail'
 
 function PetProfile() {
     return (
@@ -7,13 +7,11 @@ function PetProfile() {
             <div className='pet-card-item'>
                 <div className="pet-card">
                     <div>
-                        <br></br>
                         <div className="cardd">
                             <div className="card-bodyy">
                                 <p><h1>Stella</h1></p>
                             </div>
                         </div>
-                        <br></br>
                         <div className="cardd text-bg-dark">
                             <img src="./images/stella.jpg" class="card-img" alt="..."/>
                                 <div className="card-img-overlay">
@@ -23,7 +21,7 @@ function PetProfile() {
                                     <p className="card-text"><small>Child friendly</small></p>
                                 </div>
                         </div>
-                        
+
                         <div className="card-pet">
                             <div className="card-body">
                                 <p><h1>Adoption</h1></p>
@@ -37,12 +35,14 @@ function PetProfile() {
                                     The large round head, the big, sparkling eyes, and the wrinkled brow give Pugs a range of human-like 
                                     expressions 'surprise, happiness, curiosity' that have delighted owners for centuries.</p>
                                 <p><h1>Adoption Details</h1></p>
-                                <p>Once you've found 'the one', add to your favourites, or contact our team using the Contact Form below.
+                                <p>Once you've found 'the one', add to your favourites. Contact our team and
+                                    arrange to visit them - taking your completed application form with you.
                                     Staff or volunteers at the centre will discuss with you the information you've
-                                    provided and the needs of the dog you've chosen. At this point we will arrange an appointment visit them
+                                    provided and the needs of the dog you've chosen.
                                     If they believe that both you and your chosen dog are a good match then
                                     they'll arrange for you to meet.
                                 </p>
+                                <ConnectionEmail />
                                 <p></p>
                             </div>
                         </div>
