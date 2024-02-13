@@ -1,5 +1,5 @@
 import './pet-page.css'
-
+import ConnectionEmail from '../../components/ConnectionEmail/ConnectionEmail'
 
 function PetProfile() {
     return (
@@ -42,6 +42,7 @@ function PetProfile() {
                                     If they believe that both you and your chosen dog are a good match then
                                     they'll arrange for you to meet.
                                 </p>
+                                <ConnectionEmail />
                                 <p></p>
                             </div>
                         </div>

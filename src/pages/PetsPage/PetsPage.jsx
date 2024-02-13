@@ -1,30 +1,18 @@
 import './pets-page.css';
-import PetCard from '../../components/PetCard/PetCard';
 import Footer from '../../components/Footer/Footer';
 import SectionBorder from '../../components/SectionBorder/SectionBorder';
-import petData from '../../components/PetCard/data/petData.json';
+import SearchFilters from '../../components/SearchFilters/SearchFilters';
 
 function PetsPage() {
-    const petsContent = $('#pets-content')
     
-    return (
-        <div id="pets-page" className='pets-container'>
-            <div id="pets-content" className='pets-content grid'>
-                {petData.map((petData) => (
-                    <PetCard 
-                    key={petData.id}
-                    name={petData.name}
-                    location={petData.location}
-                    age={petData.age}
-                    breed={petData.breed}
-                    image={petData.image}
-                    specialRequirements={petData.specialRequirements}
-                    description={petData.description} />
-                    ))}
-            </div>
+
+    return ( 
+        <div>
+            <SearchFilters />
             <SectionBorder/>
             <Footer />
         </div>
+    
     );
 }
 
