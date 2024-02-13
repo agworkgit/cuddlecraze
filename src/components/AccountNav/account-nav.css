@@ -1,0 +1,41 @@
+.account-nav {
+    background-color: var(--background-color);
+    margin: 0 auto;
+    width: 100%;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-block: 1.5rem;
+    gap: 0rem;
+    align-items: center;
+    margin-inline: 5%;
+}
+
+.acc-title {
+    font-size: var(--title-size);
+}
+
+.acc-donate {
+    font-size: var(--header-size);
+    font-family: var(--description-font);
+    font-size: var(--link-size)
+}
+
+.acc-ch-pers {
+    font-size: var(--header-size);
+    font-family: var(--description-font);
+    font-size: var(--link-size)
+}
+
+.acc-ch-pass {
+    font-size: var(--header-size);
+    font-family: var(--description-font);
+    font-size: var(--link-size)
+}
+
+.acc-text {
+    color: var(--title-color);
+}

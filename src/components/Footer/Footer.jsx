@@ -1,17 +1,14 @@
+import FooterBrandIcon from '../Icons/FooterBrandIcon';
 import './footer.css'
-import { useContext } from "react";
-import { ThemeContext } from "../../App";
+
 
 const Footer = () => {
-    const { theme } = useContext(ThemeContext);
-
-    const logoImage = theme === 'dark-mode' ? './logos/cuddle-craze-light.png' : './logos/cuddle-craze-dark.png';
-
-
     return (
-        <div className='footer-container container'>
+        <div className='container'>
+            <div className='footer'>
             <div className='brand-container'>
-                <img className="footer-logo" src={logoImage} alt="" /><div className='footer-info'>
+                <FooterBrandIcon className="footer-logo"/>
+                <div className='footer-info'>
                     <h1 className='footer-end-title'>CuddleCraze</h1>
                     <div className="footer-title">
                         <h1 className="company-slogan">Where Every Pet Finds a Hug, and Every Heart Finds a Friend.</h1>
@@ -22,6 +19,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='footer-spacing'></div>
+            </div>
         </div>
     );
 }

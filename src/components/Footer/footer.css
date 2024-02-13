@@ -1,20 +1,16 @@
-.footer-container {
+.footer {
     background-color: var(--button-color);
-    max-width: 968px;
     margin: 0 auto;
-    padding: 0 !important;
+    padding: 1.5rem;
+    width: 90%;
+    padding-top: var(--mb-1-5);
 }
 
 .brand-container {
     display: grid;
     grid-template-columns: 1fr repeat(1, 1fr);
     align-items: center;
-    padding: 1rem;
-}
-
-.footer-logo {
-    height: 256px;
-    width: auto;
+    /* padding: 1rem; */
 }
 
 .footer-title {
@@ -54,7 +50,7 @@
 }
 
 .footer-spacing {
-    height: 3vh;
+    height: 0vh;
     width: 100%;
 }
 
@@ -63,18 +59,13 @@
 
 @media screen and (max-width: 768px) {
     .footer-spacing {
-        height: 8vh;
+        height: 1vh;
     }
 }
 
 @media screen and (max-width: 567px) {
     .footer-spacing {
-        height: 8vh;
-    }
-
-    .footer-logo {
-        height: auto;
-        width: auto;
+        height: 5vh;
     }
 
     .brand-container {

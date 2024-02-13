@@ -13,8 +13,7 @@
             "p5": "Playing fetch is another excellent exercise for dogs that helps improve their physical fitness and mental agility. It enables them to release pent-up energy, which can help prevent destructive behavior. It also improves their coordination, balance, and reflexes.",
             "p6": "In conclusion, regular exercise is crucial for your dog's overall health and happiness. So, grab your dog's leash, and take them for a walk or play a game of fetch in the backyard to provide them with the physical and mental stimulation they need."
         },
-        "keywords": ["exercise", "dogs", "health", "wellness", "happiness"],
-        "favorites": false
+        "keywords": ["exercise", "dogs", "health", "wellness", "happiness"]
     },
     {
         "id": 2,
@@ -31,8 +30,7 @@
             "p6": "In addition to a nutritious diet, fresh water should be available to your dog at all times. This helps to keep them hydrated and maintain their body temperature.",
             "p7": "Overall, providing a balanced and nutritious diet is essential for your dog's health and longevity. With the right diet, your dog will have the energy and vitality to enjoy life to the fullest."
         },
-        "keywords": ["nutrition", "diet", "health", "wellness", "balance"],
-        "favorites": false
+        "keywords": ["nutrition", "diet", "health", "wellness", "balance"]
     },
     {
         "id": 3,
@@ -50,8 +48,7 @@
             "p7": "Early detection of such issues can help prevent severe health problems down the line. Regular grooming helps your dog feel comfortable and confident. It also helps strengthen your bond with your furry friend.",
             "p8": "So, make grooming a part of your dog's routine, and enjoy the benefits it brings to your dog's overall health and happiness."
         },
-        "keywords": ["grooming", "hygiene", "health", "wellness", "bonding"],
-        "favorites": false
+        "keywords": ["grooming", "hygiene", "health", "wellness", "bonding"]
     },
     {
         "id": 4,
@@ -67,8 +64,7 @@
             "p5": "Vocalizations are another way dogs communicate their needs and emotions. For example, a high-pitched whine may indicate that they are in pain or need attention, while growling or barking can",
             "p6": "By paying attention to these cues, you can respond appropriately to your dog's needs and prevent misunderstandings. Understanding their body language will help you build a stronger bond with your furry friend and create a more harmonious relationship."
         },
-        "keywords": ["body language", "communication", "emotions", "bonding"],
-        "favorites": false
+        "keywords": ["body language", "communication", "emotions", "bonding"]
     },
     {
         "id": 5,
@@ -85,8 +81,7 @@
             "p6": "Finally, ensure that your dog has access to fresh water and a healthy diet. Keep their water bowl filled at all times and provide them with high-quality dog food that meets their nutritional needs.",
             "p7": "By following these tips, you can create a loving and secure environment for your furry friend where they can thrive and be happy."
         },
-        "keywords": ["safety", "environment", "home", "comfort"],
-        "favorites": false
+        "keywords": ["safety", "environment", "home", "comfort"]
     },
     {
         "id": 6,
@@ -102,8 +97,7 @@
             "p5": "Also, regular training enhances the quality of your dog's life by stimulating their mind, providing them with physical exercise, and promoting good health.",
             "p6": "In summary, training your dog is an essential task that helps you build a stronger bond with your furry friend, prevent behavior problems, and enhance your pet's quality of life."
         },
-        "keywords": ["training", "manners", "obedience", "bonding"],
-        "favorites": false
+        "keywords": ["training", "manners", "obedience", "bonding"]
     },
     {
         "id": 7,
@@ -123,8 +117,7 @@
             "p9": "This way, they are less likely to become anxious or aggressive in unfamiliar settings. In conclusion, socialization is an ongoing process that requires patience and guidance.",
             "p10": "With consistent socialization, you can help your dog develop into a well-adjusted and friendly companion that can handle various situations with ease."
         },
-        "keywords": ["socialization", "interactions", "emotional well-being", "behavior"],
-        "favorites": false
+        "keywords": ["socialization", "interactions", "emotional well-being", "behavior"]
     },
     {
         "id": 8,
@@ -143,7 +136,6 @@
             "p8": "Finally, you may want to consider pet insurance to help cover unexpected medical expenses. Pet insurance can give you peace of mind knowing that you can provide your furry friend with the best possible care without worrying about the cost.",
             "p9": "With proper care and attention, your dog can enjoy a long, happy, and healthy life."
         },
-        "keywords": ["healthcare", "veterinary care", "vaccinations", "dental care"],
-        "favorites": false
+        "keywords": ["healthcare", "veterinary care", "vaccinations", "dental care"]
     }
 ]

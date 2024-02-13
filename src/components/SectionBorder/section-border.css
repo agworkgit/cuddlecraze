@@ -1,8 +1,7 @@
 .section-border {
     background-color: var(--title-color);
     height: 1.5px;
-    width: 100vw;
-    max-width: 968px;
+    width: 90%;
     margin: 0 auto;
     padding: 0 !important;
 }

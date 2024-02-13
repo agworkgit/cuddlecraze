@@ -6,20 +6,20 @@ import { validateEmail } from "./Utils";
 // In this scenario, you need to use the onBlur event, which is called whenever the input loses focus, so that guarantees the user has interacted with the password input at least once. In that event, you should set the isTouched property to true with the password state setter.
 // Then, the condition to display the error message relies on that value being true and a check on the password length to see if it’s less than 8 characters long. If the condition is true, the component PasswordErrorMessage should be rendered.
 
-const PasswordErrorMessage = () => {
-  return (
-    <p className="FieldError">Password should have at least 8 characters</p>
-  );
-};
+// const PasswordErrorMessage = () => {
+//   return (
+//     <p className="FieldError">Password should have at least 8 characters</p>
+//   );
+// };
 
 function Form() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState({
-    value: "",
-    isTouched: false,
-  });
+  // const [password, setPassword] = useState({
+  //   value: "",
+  //   isTouched: false,
+  // });
 //   const [role, setRole] = useState("role");
 
   const getIsFormValid = () => {
@@ -38,20 +38,20 @@ const clearForm = () => {
   setFirstName('');
   setLastName('');
   setEmail('');
-  setPassword({
-    value: '',
-    isTouched: false,
-  });
+  // setPassword({
+  //   value: '',
+  //   isTouched: false,
+  // });
 //   setRole('role');
 };
 
-  const handlePasswordChange = (e) => {
-    // Update the password value and set isTouched to true
-    setPassword({
-      value: e.target.value,
-      isTouched: true,
-    });
-  };
+  // const handlePasswordChange = (e) => {
+  //   // Update the password value and set isTouched to true
+  //   setPassword({
+  //     value: e.target.value,
+  //     isTouched: true,
+  //   });
+  // };
 
   const handleSubmit = (e) => {
     // Prevent the default browser refresh

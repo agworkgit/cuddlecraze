@@ -1,13 +1,13 @@
 .highlight-title {
     color: var(--title-color);
     text-align: center;
-    padding-top: 2rem;
-    margin-bottom: -3rem;
+    padding-top: 1.5rem;
+    margin-bottom: -3.5rem;
 }
 
 .highlight-info {
     padding-top: 1rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2.5rem;
     grid-template-columns: 3fr repeat(4, 1fr);
     gap: 1rem;
 }
@@ -95,7 +95,6 @@
 @media screen and (max-width: 992px) {
     .highlight-info {
         grid-template-columns: repeat(2, 1fr);
-        width: 80%;
         margin-inline: auto;
     }
 }
@@ -105,7 +104,6 @@
         padding-block: 6rem;
         grid-template-columns: repeat(2, 1fr);
         gap: 3rem;
-        width: 85%;
         margin-inline: auto;
     }
 
