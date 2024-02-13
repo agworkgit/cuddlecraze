@@ -1,20 +1,18 @@
 import './pets-page.css';
-import PetCard from '../../components/PetCard/PetCard';
 import Footer from '../../components/Footer/Footer';
 import SectionBorder from '../../components/SectionBorder/SectionBorder';
+import SearchFilters from '../../components/SearchFilters/SearchFilters';
 
 function PetsPage() {
-    return (
-        <div id="pets-page" className='pets-container'>
-            <div className='pets-content grid'>
-                <PetCard />
-                <PetCard />
-                <PetCard />
-                <PetCard />
-            </div>
+    
+
+    return ( 
+        <div>
+            <SearchFilters />
             <SectionBorder/>
             <Footer />
         </div>
+    
     );
 }
 
