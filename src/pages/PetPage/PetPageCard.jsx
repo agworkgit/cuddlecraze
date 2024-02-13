@@ -13,7 +13,7 @@ function PetProfile() {
                             </div>
                         </div>
                         <div className="cardd text-bg-dark">
-                            <img src="./images/stella.jpg" class="card-img" alt="..."/>
+                            <img src="./images/stella.jpg" className="card-img" alt="..."/>
                                 <div className="card-img-overlay">
                                     <h5 className="card-title">This is Stella</h5>
                                     <p className="card-text">Likes: Small Balls, Chicken, Naps.</p>
@@ -42,9 +42,9 @@ function PetProfile() {
                                     If they believe that both you and your chosen dog are a good match then
                                     they'll arrange for you to meet.
                                 </p>
-                                <ConnectionEmail />
                                 <p></p>
                             </div>
+                            <ConnectionEmail />
                         </div>
 
                         {/* <img className="card-image" src="./images/stella.jpg" alt="Betsy" />

@@ -7,8 +7,8 @@ function DogVideos() {
   //  (as long as the quote hasn't been exceeded) -----------------
 
   const [data, setData] = useState([]);
-
-  const dogType = "poodle"
+  const dog = JSON.parse(localStorage.getItem("selectedDog"))
+  const dogType = dog.breed
   const apiKey = "AIzaSyCZEcJXXbSbG_g0wR2uhHpEc7LZZEJbJy4"
   const search = "how%20to%20care%20for%20a%20" + dogType
   const queryURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelType=any&maxResults=3&order=relevance&q=" + search + "&key=" + apiKey
@@ -30,7 +30,7 @@ function DogVideos() {
   // {src1}
   // {src2}
   // {src3}
-
+console.log(search)
   return (
     <div>
       {/* <div className="videoContainerVertical">
@@ -38,8 +38,8 @@ function DogVideos() {
         <iframe src={src1}></iframe>
         <iframe src={src2}></iframe>
         <iframe src={src3}></iframe>
-      </div>
-      <br></br> */}
+      </div> */}
+      <br></br>
       <br></br>
       <div className='videoContainerHorizontal'>
         <h3>Helpful Videos</h3>
