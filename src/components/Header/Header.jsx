@@ -61,7 +61,7 @@ const Header = () => {
                     </li>
 
                     <li className="nav-item">
-                      <Link to="/pet-page" className="nav-link" smooth="true" duration={200} onClick={() => { handleMenuClose(); }}>
+                      <Link to="/pets-page" className="nav-link" smooth="true" duration={200} onClick={() => { handleMenuClose(); }}>
                         <i className="bi bi-tools nav-icon"></i> Adopt
                       </Link>
                     </li>

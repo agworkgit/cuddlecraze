@@ -1,6 +1,7 @@
 import { Console } from 'console';
 import './pet-page.css'
 import React, {useEffect, useState} from 'react'
+import ConnectionEmail from '../../components/ConnectionEmail/ConnectionEmail'
 
 const petData = ({name, location, age, image, breed, 
                 specialRequirements, description}) => {
@@ -18,19 +19,18 @@ const petData = ({name, location, age, image, breed,
                     },[]);
                 }
 
+
 function PetProfile() {
     return (
         <div className="pet-card">
             <div className='pet-card-item'>
                 <div className="pet-card">
                     <div>
-                        <br></br>
                         <div className="cardd">
                             <div className="card-bodyy">
                                 <p><h1>{petData.name}</h1></p>
                             </div>
                         </div>
-                        <br></br>
                         <div className="cardd text-bg-dark">
                             <img src={petData.image} class="card-img" alt="..."/>
                                 <div className="card-img-overlay">
@@ -39,7 +39,7 @@ function PetProfile() {
                                     <p className="card-text"><small>Breed: {petData.breed}</small></p>
                                 </div>
                         </div>
-                        
+
                         <div className="card-pet">
                             <div className="card-body">
                                 <p><h1>Location</h1></p>
@@ -47,12 +47,14 @@ function PetProfile() {
                                 <p><h1>My Details</h1></p>
                                 <p>{petData.description}</p>
                                 <p><h1>Adoption Details</h1></p>
-                                <p>Once you've found 'the one', add to your favourites, or contact our team using the Contact Form below.
+                                <p>Once you've found 'the one', add to your favourites. Contact our team and
+                                    arrange to visit them - taking your completed application form with you.
                                     Staff or volunteers at the centre will discuss with you the information you've
-                                    provided and the needs of the dog you've chosen. At this point we will arrange an appointment visit them
+                                    provided and the needs of the dog you've chosen.
                                     If they believe that both you and your chosen dog are a good match then
                                     they'll arrange for you to meet.
                                 </p>
+                                <ConnectionEmail />
                                 <p></p>
                             </div>
                         </div>
