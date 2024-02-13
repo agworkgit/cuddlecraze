@@ -7,7 +7,6 @@ import LoginPage from './pages/LoginPage/LoginPage';
 import PetsPage from './pages/PetsPage/PetsPage';
 import AccountPage from './pages/AccountPage/AccountPage';
 import PetPage from './pages/PetPage/PetPage';
-import petData from './components/PetCard/data/petData.json'
 
 
 import AdvicePageMain from "./pages/AdvicePage/AdvicePageMain";
@@ -32,7 +31,7 @@ export const App = () => {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className={`App ${theme}`} id={theme}>
-        <Router >
+        <Router>
           <Header />
           <Routes>
             <Route
@@ -84,13 +83,12 @@ export const App = () => {
               }
             />
             <Route
-            path="/pet-page/:id"
-            exact component={petData}
-            // element={
-            //   // <>
-            //   //   <PetPage id="pet-page"  />
-            //   // </>
-            // }
+            path="/pet-page/"
+            element={
+              <>
+                <PetPage id="pet-page"  />
+              </>
+            }
             />
             <Route
             path="/advice"

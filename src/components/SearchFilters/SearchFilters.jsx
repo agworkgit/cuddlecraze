@@ -3,6 +3,7 @@ import { useState } from 'react';
 import PetCard from '../../components/PetCard/PetCard';
 import { Link } from 'react-router-dom';
 import React from 'react';
+import PetPage from '../../pages/PetPage/PetPage';
 
 const SearchFilters = function() {
     const [selectedBreed, setSelectedBreed] = useState(petData);
@@ -59,7 +60,7 @@ const SearchFilters = function() {
         <div id="pets-content" className='pets-content grid'>
             {filteredDogs.map((item) => (
             <Link 
-                to="pet-page/"
+                to="/pet-page"
                 onClick={() => {localStorage.setItem("selectedDog", JSON.stringify(item))
                 }}
             >
