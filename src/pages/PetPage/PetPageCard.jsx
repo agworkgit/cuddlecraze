@@ -1,5 +1,22 @@
+import { Console } from 'console';
 import './pet-page.css'
+import React, {useEffect, useState} from 'react'
 
+const petData = ({name, location, age, image, breed, 
+                specialRequirements, description}) => {
+
+                    const [dogs, dogData] = useState([]);
+
+                    useEffect ( () => {
+                        fetch('./petData.json')
+                        .then((response) => response.json())
+                        .then((data) => {
+                            dogData(data.id)
+                            console.log('logging out dogs: ${dogs[0].name}');
+                        })
+                        .catch((error) => console.error('Error fetching characters:', error));
+                    },[]);
+                }
 
 function PetProfile() {
     return (
@@ -10,32 +27,25 @@ function PetProfile() {
                         <br></br>
                         <div className="cardd">
                             <div className="card-bodyy">
-                                <p><h1>Stella</h1></p>
+                                <p><h1>{petData.name}</h1></p>
                             </div>
                         </div>
                         <br></br>
                         <div className="cardd text-bg-dark">
-                            <img src="./images/stella.jpg" class="card-img" alt="..."/>
+                            <img src={petData.image} class="card-img" alt="..."/>
                                 <div className="card-img-overlay">
-                                    <h5 className="card-title">This is Stella</h5>
-                                    <p className="card-text">Likes: Small Balls, Chicken, Naps.</p>
-                                    <p>Hates: Daisy the Cat</p>
-                                    <p className="card-text"><small>Child friendly</small></p>
+                                    <h5 className="card-title">This is {petData.name}</h5>
+                                    <p className="card-text">Special Requirements: {petData.specialRequirements}</p>
+                                    <p className="card-text"><small>Breed: {petData.breed}</small></p>
                                 </div>
                         </div>
                         
                         <div className="card-pet">
                             <div className="card-body">
-                                <p><h1>Adoption</h1></p>
-                                <p>Stella has been here for a week so far, she has had all her jabs.</p>
+                                <p><h1>Location</h1></p>
+                                <p>{petData.location}</p>
                                 <p><h1>My Details</h1></p>
-                                <p>Once the mischievous companion of emperors, and later the mascot of Holland's royal House of Orange, 
-                                    the small but solid Pug is today adored by his millions of fans around the world. 
-                                    Pugs live to love and to be loved in return. The Pug's motto is the Latin phrase 'multum in parvo' - 
-                                    'a lot in a little' an apt description of this small but muscular breed. 
-                                    They come in three colors: silver or apricot-fawn with a black face mask, or all black. 
-                                    The large round head, the big, sparkling eyes, and the wrinkled brow give Pugs a range of human-like 
-                                    expressions 'surprise, happiness, curiosity' that have delighted owners for centuries.</p>
+                                <p>{petData.description}</p>
                                 <p><h1>Adoption Details</h1></p>
                                 <p>Once you've found 'the one', add to your favourites, or contact our team using the Contact Form below.
                                     Staff or volunteers at the centre will discuss with you the information you've
