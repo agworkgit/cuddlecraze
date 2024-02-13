@@ -7,7 +7,9 @@
         "image": "https://external-preview.redd.it/NTr2qd78cRi5Bhux4ByPOvyvzrqdUKXwdLS1EC39pOM.jpg?width=640&crop=smart&auto=webp&s=c98befedc37308560d92d72c5f5d807699f09a65",
         "breed": "Corgi",
         "specialRequirements": "Not very sociable",
-        "description": "Albert is a very cheerful corgi, looking for a new owner without other pets"
+        "description": "Albert is a very cheerful corgi, looking for a new owner without other pets",
+        "favorites": false,
+        "adopted": false
     },
     {
         "id": 2,
@@ -17,7 +19,9 @@
         "image": "https://www.dogsblog.com/wp-content/uploads/2023/08/Montyo.jpeg",
         "breed": "Dachshund",
         "specialRequirements": "Blind in left eye",
-        "description": "Betsy is a tiny Dachshund, full of life, but a little clumsy"
+        "description": "Betsy is a tiny Dachshund, full of life, but a little clumsy",
+        "favorites": false,
+        "adopted": false
     },
     {
         "id": 3,
@@ -27,7 +31,9 @@
         "image": "https://doggoneproblems.com/wp-content/uploads/2015/04/olaf.jpg?w=300",
         "breed": "Golden Retriever",
         "specialRequirements": "Gets lonely",
-        "description": "Cosmo was my mother's best friend. Since she passed, he needs a stay-at-home carer"
+        "description": "Cosmo was my mother's best friend. Since she passed, he needs a stay-at-home carer",
+        "favorites": false,
+        "adopted": false
     },
     {
         "id": 4,
@@ -37,7 +43,9 @@
         "image": "https://adoptdog.in/wp-content/uploads/2022/09/Labrador-Dog-for-Adoption-in-Delhi.jpg",
         "breed": "Labrador",
         "specialRequirements": "Smudge is a bundle of energy. Rescued from the street, needs a stable home",
-        "description": "Frightens easily"
+        "description": "Frightens easily",
+        "favorites": false,
+        "adopted": false
     },
     {
         "id": 5,
@@ -47,7 +55,9 @@
         "image": "https://www.dogsblog.com/wp-content/uploads/2023/07/Jetq2-scaled.jpg",
         "breed": "Spaniel",
         "specialRequirements": "Missing a few teeth",
-        "description": "This is Captain. Needs a new home after current owners emigrating. Very friendly!"
+        "description": "This is Captain. Needs a new home after current owners emigrating. Very friendly!",
+        "favorites": false,
+        "adopted": false
     },
     {
         "id": 6,
@@ -57,7 +67,9 @@
         "image": "https://i.pinimg.com/originals/5c/38/f0/5c38f0ebd93d3f211bf23d697903f302.jpg",
         "breed": "Cockerpoo",
         "specialRequirements": "Needs a LOT of walkies",
-        "description": "Lucy is a very good girl indeed. Hypoallergenic and in perfect health"
+        "description": "Lucy is a very good girl indeed. Hypoallergenic and in perfect health",
+        "favorites": false,
+        "adopted": false
     },
     {
         "id": 7,
@@ -67,7 +79,9 @@
         "image": "https://www.tallahassee.com/gcdn/presto/2022/03/04/PTAL/598f602b-180d-473d-96d4-e0c9423b84dd-Puddin.jpg?width=660&height=719&fit=crop&format=pjpg&auto=webp",
         "breed": "French Bulldog",
         "specialRequirements": "Walks with a limp",
-        "description": "She may look grumpy, but Teri has a heart of gold. Quite loud, but that's only because she feels protective"
+        "description": "She may look grumpy, but Teri has a heart of gold. Quite loud, but that's only because she feels protective",
+        "favorites": false,
+        "adopted": false
     },
     {
         "id": 8,
@@ -77,7 +91,9 @@
         "image": "https://www.doggoneproblems.com/wp-content/uploads/2017/05/Regis-and-Bennett.jpg",
         "breed": "Beagle",
         "specialRequirements": "Can't be separated",
-        "description": "Mitzy (left) & Pickle (right) are brother and sister and totally devoted to each other. A lot of energy, and looking for one new owner to take both"
+        "description": "Mitzy (left) & Pickle (right) are brother and sister and totally devoted to each other. A lot of energy, and looking for one new owner to take both",
+        "favorites": false,
+        "adopted": false
     },
     {
         "id": 9,
@@ -87,7 +103,9 @@
         "image": "https://a-z-animals.com/media/2023/10/GettyImages-1072271820.jpg",
         "breed": "Scottish Terrier",
         "specialRequirements": "Delicate",
-        "description": "Quite old now, but Tom's still a dependable pal, even if the bark's gone out of him. Adores being in the woods."
+        "description": "Quite old now, but Tom's still a dependable pal, even if the bark's gone out of him. Adores being in the woods.",
+        "favorites": false,
+        "adopted": false
     },
     {
         "id": 10,
@@ -97,7 +115,9 @@
         "image": "https://i0.wp.com/lellalee.com/wp-content/uploads/2022/10/img_9046.jpg?fit=1440%2C1080&ssl=1",
         "breed": "Cavapoo",
         "specialRequirements": "Needs feeding by hand",
-        "description": "Ruby is very yappy, and a little bit shy, but once she lets her guard down she's a sweetheart"
+        "description": "Ruby is very yappy, and a little bit shy, but once she lets her guard down she's a sweetheart",
+        "favorites": false,
+        "adopted": false
     },
     {
         "id": 11,
@@ -107,7 +127,9 @@
         "image": "https://dogtime.com/wp-content/uploads/sites/12/2023/07/GettyImages-1406924473.jpg?w=1024",
         "breed": "Crossbreed",
         "specialRequirements": "Ideally adopted together",
-        "description": "From the same litter, Chester and Milo are best of friends. "
+        "description": "From the same litter, Chester and Milo are best of friends.",
+        "favorites": false,
+        "adopted": false
     },
     {
         "id": 12,
@@ -117,7 +139,9 @@
         "image": "https://i.abcnewsfe.com/a/43d580b4-eeaf-4e1d-acb8-801c7b72f04b/dog-0881-ht-ml-221020_1666279774918_hpMain_1x1.jpg",
         "breed": "Crossbreed",
         "specialRequirements": "Comfort required in his old age",
-        "description": "A dog in his later years, but still a wonderful (and very fashionable) companion"
+        "description": "A dog in his later years, but still a wonderful (and very fashionable) companion",
+        "favorites": false,
+        "adopted": false
     },
     {
         "id": 13,
@@ -127,7 +151,9 @@
         "image": "https://www.dogsblog.com/wp-content/uploads/2023/10/Jax3.jpg",
         "breed": "Chihuahua",
         "specialRequirements": "Needs medicine for her gums",
-        "description": "Lilu is a quiet little lady, getting on in dog years, but still in good health"
+        "description": "Lilu is a quiet little lady, getting on in dog years, but still in good health",
+        "favorites": false,
+        "adopted": false
     },
     {
         "id": 14,
@@ -137,7 +163,9 @@
         "image": "https://2img.net/h/i1307.photobucket.com/albums/s593/Mandy_Meaker/Viking.jpg",
         "breed": "Staffie",
         "specialRequirements": "No special requirements",
-        "description": "Mr President is your new best friend. Looks tough, but actually quite timid"
+        "description": "Mr President is your new best friend. Looks tough, but actually quite timid",
+        "favorites": false,
+        "adopted": false
     },
     {
         "id": 15,
@@ -147,6 +175,8 @@
         "image": "https://preview.redd.it/qv50r63njck71.jpg?width=640&crop=smart&auto=webp&s=c665d446da0fb9cf01983eea9e4f750f27d854ed",
         "breed": "Doberman",
         "specialRequirements": "Damaged voice, occasional checkup required",
-        "description": "Rescued from an abusive home, Scooby takes a while to warm up to strangers, but aside from a croaky bark, is good as gold"
+        "description": "Rescued from an abusive home, Scooby takes a while to warm up to strangers, but aside from a croaky bark, is good as gold",
+        "favorites": false,
+        "adopted": false
     }
 ]
