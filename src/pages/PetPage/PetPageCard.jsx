@@ -38,17 +38,17 @@ function PetProfile() {
 
                         <div className="card-pet">
                             <div className="card-body">
-                                <p><h1>Breed</h1></p>
+                                <h1>Breed</h1>
                                 <p>{petData.breed}</p>
-                                <p><h1>Age</h1></p>
+                                <h1>Age</h1>
                                 <p>{petData.age} years old</p>
-                                <p><h1>Location</h1></p>
+                                <h1>Location</h1>
                                 <p>{petData.location}</p>
-                                <p><h1>Special Requirement</h1></p>
+                                <h1>Special Requirement</h1>
                                 <p>{petData.specialRequirements}</p>
-                                <p><h1>My Details</h1></p>
+                                <h1>My Details</h1>
                                 <p>{petData.description}</p>
-                                <p><h1>Adoption Details</h1></p>
+                                <h1>Adoption Details</h1>
                                 <p>Once you've found 'the one', add to your favourites. Contact our team and
                                     arrange to visit them - taking your completed application form with you.
                                     Staff or volunteers at the centre will discuss with you the information you've
@@ -56,7 +56,6 @@ function PetProfile() {
                                     If they believe that both you and your chosen dog are a good match then
                                     they'll arrange for you to meet.
                                 </p>
-                                <p></p>
                             </div>
                         </div>
 
