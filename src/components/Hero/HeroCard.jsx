@@ -31,7 +31,7 @@ function HeroCard() {
                 </div>
             </div>
 
-            <div className='card-item'>
+            {/* <div className='card-item'>
                 <div className="hero-card">
                     <div>
                         <img className="hero-image" src="./images/baby-dog.jpg" alt="Betsy" />
@@ -41,7 +41,7 @@ function HeroCard() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }
