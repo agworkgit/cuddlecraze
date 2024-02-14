@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { ThemeContext } from "../../App";
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
+/* import { Link as ScrollLink } from 'react-scroll'; */
 import ReactSwitch from "react-switch";
 import "./header.css";
 
