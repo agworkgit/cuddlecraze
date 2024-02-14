@@ -32,17 +32,15 @@ function DogVideos() {
   // })
   
 
-  return (
-    <div>
-      <div className="videoContainerHorizontal">
-        <h3>How To Care For A {dog.breed}</h3>
-        <div id='videoBox'>
-          <iframe src="https://www.youtube.com/embed/peUVLEUj-AM"></iframe>
-        </div>
-      </div>
-      <br></br>
-    </div>
-   );
+  // return (
+  //   <div>
+  //     <div className="videoContainerHorizontal">
+  //       <h3>How To Care For A {dog.breed}</h3>
+  //       <div id='videoBox'></div>
+  //     </div>
+  //     <br></br>
+  //   </div>
+  //  );
   }
 
 export default DogVideos

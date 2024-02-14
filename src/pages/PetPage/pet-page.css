@@ -79,6 +79,14 @@
     text-align: center;
 }
 
+.pet-pic{
+    height: auto;
+    width: 60%;
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .card-bodyy {
     color: var(--card-text-color);
