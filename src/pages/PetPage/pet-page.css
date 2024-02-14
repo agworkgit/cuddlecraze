@@ -3,6 +3,7 @@
     /* height: 100vh; */
     /* padding-top: 6rem; */
     max-width: 968px;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -62,6 +63,7 @@
         background-clip: border-box;
         border: var(--bs-card-border-width) solid var(--bs-card-border-color);
         border-radius: var(--bs-card-border-radius);
+        background-color: var(--card-color);
 
 }
 
@@ -80,8 +82,8 @@
 }
 
 .pet-pic{
-    height: auto;
-    width: 60%;
+    height: 500px;
+    width: auto;
     justify-content: center;
     display: block;
     margin-left: auto;
