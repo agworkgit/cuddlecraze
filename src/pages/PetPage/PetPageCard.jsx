@@ -33,7 +33,7 @@ function PetProfile() {
                             </div>
                         </div>
                         <div className="cardd text-bg-dark">
-                            <img src={petData.image} className="card-img" alt="..."/>
+                            <img src={petData.image} className="card-img pet-pic" alt="..."/>
                         </div>
 
                         <div className="card-pet">
