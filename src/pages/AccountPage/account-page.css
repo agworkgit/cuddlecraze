@@ -1,0 +1,136 @@
+.account-container {
+  background-color: var(--background-color);
+  padding-top: 6rem;
+  max-width: 968px;
+  margin: 0 auto;
+  text-align: center;
+}
+.form-title {
+  font-family: var(--title-font);
+  font-size: 35px !important;
+  margin-bottom: 20px;
+  color: var(--title-font);
+}
+.account-content {
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.section-buttons {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.section-buttons button {
+  background-color: var(--button-color);
+  color: white;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  flex: 1;
+}
+
+.section-buttons button:focus {
+  outline: none;
+}
+
+.profile-section {
+  margin-bottom: 20px;
+}
+
+.profile-section .profile-details {
+  text-align: left;
+}
+
+.profile-section .profile-details ul {
+  padding: 0;
+  list-style: none;
+}
+
+.profile-section .profile-details ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.profile-section .profile-details ul li:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .account-container {
+    max-width: 79%;
+  }
+
+  .account-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.add-pet-container {
+  max-width: 968px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 68px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+}
+
+form.add-pet-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-pet-form input,
+.add-pet-form textarea {
+  width: calc(100% - 20px); /* Adjusted width to consider padding */
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.add-pet-form textarea {
+  height: 200px;
+  border-radius: 15px;
+}
+
+.add-pet-form button {
+  font-family: var(--description-font);
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #557d60; /* Using CSS variable for button background color */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-pet-form button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 576px) {
+  .account-container {
+    padding-top: 2rem;
+    max-width: 79%;
+  }
+
+  .account-content {
+    padding-top: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .account-content {
+    padding-top: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

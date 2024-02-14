@@ -1,0 +1,240 @@
+/* Font Imports */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Font Defaults */
+
+/* Variables */
+:root {
+  /* Header */
+  --header-height: 3rem;
+  /* Font Selection */
+  --title-font: 'DM Serif Display', serif;
+  --description-font: 'Inter', sans-serif;
+  /* Font Weight */
+  --light-font: '300';
+  --medium-font: '500';
+  --regular-font: '400' ;
+  --semibold-font: '600';
+  --bold-font: '700';
+  /* Font Size - 0.5rem = 8px; | 1rem = 16px */
+  --title-size: clamp(1.5rem, 1.3676rem + 0.7059vw, 2.25rem);
+  --header-size: clamp(1rem, 0.9559rem + 0.2353vw, 1.25rem);
+  --paragraph-size: clamp(0.875rem, 0.8529rem + 0.1176vw, 1rem);
+  --info-size: clamp(0.75rem, 0.7279rem + 0.1176vw, 0.875rem);
+  --link-size: clamp(0.625rem, 0.5588rem + 0.3529vw, 1rem);
+  --buttons-tooltips: clamp(0.625rem, 0.6029rem + 0.1176vw, 0.75rem);
+  --small-print: clamp(0.5rem, 0.4779rem + 0.1176vw, 0.625rem);
+  /* Font Style */
+  --italic: italic;
+  /* Bottom Margins */
+  /* 0.5rem = 8px | 1rem = 16px */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+  /* Layer Position */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-relative: 50;
+  --z-modal: 1000;
+}
+
+/* Colors Palette*/
+  /* Light Mode */
+  #light-mode {
+  --background-color: #FEFAE0;
+  --background-color-transparent: rgba(254, 250, 224, 0.5);
+  --title-color: #283618;
+  --paragraph-color: #BC6C25;
+  --link-default-color: #DDA15E;
+  --link-hover-color: #BC6C25;
+  --card-color: #283618;
+  --card-text-color: #FEFAE0;
+  --button-color: #DDA15E;
+  --button-hover-color: #BC6C25;
+  --form-button-color: #889950;
+  --form-button-hover-color: #283618;
+  --disabled-button-color: #909b6e;
+  --disabled-button-hover-color: #323929;
+  --input-border-color: #BC6C25;
+  --input-field-color: #FEFAE0;
+  --modal-bg-color: #283618;
+  --modal-title-color: #BC6C25;
+  --modal-paragraph-color: #283618;
+  --modal-button-color: #FEFAE0;
+  --modal-button-bg: #BC6C25;
+  --modal-button-bg-hover: #DDA15E;
+  --favourite-color: rgb(233, 14, 79);
+  --favourite-color-hover: rgb(255, 84, 98);
+  }
+  /* Dark Mode */
+  #dark-mode {
+  --background-color: #283618;
+  --background-color-transparent: rgba(40, 54, 24, 0.5);
+  --title-color: #FEFAE0;
+  --paragraph-color: #FEFAE0;
+  --link-default-color: #FEFAE0;
+  --link-hover-color: #889950;
+  --card-color: #889950;
+  --card-text-color: #FEFAE0;
+  --button-color: #DDA15E;
+  --button-hover-color: #BC6C25;
+  --form-button-color: #DDA15E;
+  --form-button-hover-color: #BC6C25;
+  --disabled-button-color: #d8b388;
+  --disabled-button-hover-color: #b78356;
+  --input-border-color: #FEFAE0;
+  --input-field-color: #FEFAE0;
+  --modal-bg-color: #DDA15E;
+  --modal-title-color: #889950;
+  --modal-paragraph-color: #FEFAE0;
+  --modal-button-color: #FEFAE0;
+  --modal-button-bg: #889950;   
+  --modal-button-bg-hover: #283618;
+  --favourite-color: rgb(255, 84, 98);
+  --favourite-color-hover: rgb(233, 14, 79);
+  }
+
+
+/* Base */
+.App {
+  background-color: var(--background-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: var(--title-font);
+  font-size: var(--title-size);
+}
+
+p {
+  font-family: var(--description-font);
+  font-size: var(--paragraph-size);
+}
+
+body {
+  background-color: var(--background-color);
+  position: relative;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: var(--description-font);
+  font-size: var(--paragraph-size);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-position: center;
+}
+
+.switch-theme {
+  display: flex;
+  align-items: center;
+  transform: scale(0.80);
+}
+
+/* Reusable Classes */
+.section {
+  padding: 3rem 0 2rem;
+  background-color: var(--background-color) !important;
+}
+
+.section-title {
+  font-size: var(--xxl-size);
+  color: var(--title-color);
+}
+
+.section-subtitle {
+  display: block;
+  font-size: var(--s-size);
+  margin-bottom: 4rem !important;
+  color: var(--text-color);
+}
+
+.section-title,
+.section-subtitle {
+  text-align: center;
+}
+
+/* Layout */
+.container {
+  max-width: 968px;
+  margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Buttons */
+.button {
+  cursor: pointer;
+  display: inline-block;
+  background-color: var(--button-color);
+  color: var(--title-color);
+  padding: 0.5rem 1rem;
+  border-radius: 10rem;
+  font-size: var(--buttons-tooltips);
+}
+
+.button:hover {
+  background-color: var(--button-hover-color);
+  color: var(--title-color);
+}
+
+.button-icon {
+  margin-left: var(--mb-0-5);
+}
+
+.button-flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Breakpoints */
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 576px) {
+
+}
+
+@media screen and (max-width: 350px) {
+
+}
