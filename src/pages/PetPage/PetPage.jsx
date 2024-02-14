@@ -5,10 +5,12 @@ import PetProfile from './PetPageCard';
 import DogVideos from '../../components/DogVideos/DogVideos'
 import DogFacts from '../../components/DogFacts/DogFacts';
 import ConnectionEmail from '../../components/ConnectionEmail/ConnectionEmail'
+import Header from '../../components/Header/Header';
 
 function PetPage() {
     return (
         <div id="pet-profile" className='pets-container'>
+            < Header />
             <div>
                 <PetProfile />
             </div>

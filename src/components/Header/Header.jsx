@@ -54,11 +54,11 @@ const Header = () => {
                       </ScrollLink>
                     </li> */}
 
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                       <Link to="/pets-page" className="nav-link" smooth="true" duration={200} onClick={() => { handleMenuClose(); }}>
                         <i className="bi bi-tools nav-icon"></i> Adopt
                       </Link>
-                    </li>
+                    </li> */}
 
                     <li className="nav-item">
                       <Link to="/advice" className="nav-link" onClick={() => { handleMenuClose(); }}>
@@ -78,7 +78,7 @@ const Header = () => {
 
             <li className="nav-item">
               <Link to="/pets-page" className="nav-link check-link" onClick={() => { handleMenuClose(); }}>
-                <i className="bi bi-envelope nav-icon"></i> Check Our Pets
+                <i className="bi bi-envelope nav-icon"></i> Adopt
               </Link>
             </li>
 
