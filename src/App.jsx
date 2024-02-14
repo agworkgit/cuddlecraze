@@ -8,6 +8,7 @@ import PetsPage from './pages/PetsPage/PetsPage';
 import AccountPage from './pages/AccountPage/AccountPage';
 import PetPage from './pages/PetPage/PetPage';
 
+
 import AdvicePageMain from "./pages/AdvicePage/AdvicePageMain";
 import BlogPost from './components/AdviceCard/BlogPost';
 import adviceData from './components/AdviceCard/data/advice-data.json';
@@ -82,10 +83,10 @@ export const App = () => {
               }
             />
             <Route
-            path="/pet-page"
+            path="/pet-page/"
             element={
               <>
-                <PetPage id="pet-page" />
+                <PetPage id="pet-page"  />
               </>
             }
             />

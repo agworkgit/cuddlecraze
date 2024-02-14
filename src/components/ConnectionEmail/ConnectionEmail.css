@@ -1,0 +1,26 @@
+#contactBox {
+    max-width: 900px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 1%;
+    margin: auto;
+    color: #BC6C25;
+    font-weight: 500;
+  background-color: #FEFAE0;
+  
+}
+
+#sendButton {
+    padding: 0.5rem 16px;
+    width: max-content;
+    margin-top: 1.5rem;
+    background-color: #BC6C25;
+    color: #FEFAE0;
+    border: none;
+    margin-left: 10px;
+    border-radius: 1rem;
+}
+
+#validation {
+    margin-top: 10px;
+}
