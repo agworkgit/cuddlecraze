@@ -5,14 +5,13 @@ function DogFacts() {
 
     const [data, setData] = useState([]);
 
-    const url = 'https://dog-facts2.p.rapidapi.com/facts';
-    const options = {
-	    method: 'GET',
-	    headers: {
-		'X-RapidAPI-Key': '94b9e6f020msh5655a736b96a924p1c04c2jsn532f49b8810c',
-		'X-RapidAPI-Host': 'dog-facts2.p.rapidapi.com'
-	    }
-    };
+    const url = 'https://random-dog-facts.p.rapidapi.com/';
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'bc2527c02cmsh27f61ab601589f4p155766jsnc49af9f0be56',
+		'X-RapidAPI-Host': 'random-dog-facts.p.rapidapi.com'
+  }}
 
 	useEffect(() => {
         fetch(url,options)
@@ -20,12 +19,12 @@ function DogFacts() {
         .then((data) => setData(data))
       }, []) 
         
-    console.log(data.facts)
+    console.log(data.fact)
     
       return (
         <div className='card container-fluid'>
             <h2>Did you know...?</h2>
-            <p><emphasis>{data.facts}</emphasis></p>
+            <p>{data.fact}</p>
         </div>
       )
 }

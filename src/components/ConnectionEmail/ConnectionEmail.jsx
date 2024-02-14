@@ -4,6 +4,8 @@ import './ConnectionEmail.css'
 export const ConnectionEmail = () => {
   const form = useRef();
   const validation = $('#validation')
+  const dog = JSON.parse(localStorage.getItem("selectedDog"))
+  const placeholderMsg = "I'm Interested In Adopting " + dog.name + "! ID: " + dog.id 
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -54,6 +56,14 @@ export const ConnectionEmail = () => {
                 </div>
 
             </div>
+            <div className='row'>
+                <div className="col-md-12">
+                    <div className="md-form">
+                        <label for="email" className="">Subject</label>
+                            <textarea type="text" name="subject" id="subject" className="form-control">{placeholderMsg}</textarea>
+                    </div>
+                </div>
+            </div> 
             
             <div className="row">
                 <div className="col-md-12">

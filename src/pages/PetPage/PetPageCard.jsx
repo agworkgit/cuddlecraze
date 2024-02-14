@@ -1,26 +1,27 @@
-import { Console } from 'console';
 import './pet-page.css'
 import React, {useEffect, useState} from 'react'
-import ConnectionEmail from '../../components/ConnectionEmail/ConnectionEmail'
 
-const petData = ({name, location, age, image, breed, 
-                specialRequirements, description}) => {
+// const petData = ({name, location, age, image, breed, 
+//                 specialRequirements, description}) => {
 
-                    const [dogs, dogData] = useState([]);
+//                     const [dogs, dogData] = useState([]);
 
-                    useEffect ( () => {
-                        fetch('./petData.json')
-                        .then((response) => response.json())
-                        .then((data) => {
-                            dogData(data.id)
-                            console.log('logging out dogs: ${dogs[0].name}');
-                        })
-                        .catch((error) => console.error('Error fetching characters:', error));
-                    },[]);
-                }
+//                     useEffect ( () => {
+//                         fetch('./petData.json')
+//                         .then((response) => response.json())
+//                         .then((data) => {
+//                             dogData(data.id)
+//                             console.log('logging out dogs: ${dogs[0].name}');
+//                         })
+//                         .catch((error) => console.error('Error fetching characters:', error));
+//                     },[]);
+//                 }
 
 
 function PetProfile() {
+
+    const petData = JSON.parse(localStorage.getItem("selectedDog"))
+
     return (
         <div className="pet-card">
             <div className='pet-card-item'>
@@ -32,18 +33,19 @@ function PetProfile() {
                             </div>
                         </div>
                         <div className="cardd text-bg-dark">
-                            <img src={petData.image} class="card-img" alt="..."/>
-                                <div className="card-img-overlay">
-                                    <h5 className="card-title">This is {petData.name}</h5>
-                                    <p className="card-text">Special Requirements: {petData.specialRequirements}</p>
-                                    <p className="card-text"><small>Breed: {petData.breed}</small></p>
-                                </div>
+                            <img src={petData.image} className="card-img" alt="..."/>
                         </div>
 
                         <div className="card-pet">
                             <div className="card-body">
+                                <p><h1>Breed</h1></p>
+                                <p>{petData.breed}</p>
+                                <p><h1>Age</h1></p>
+                                <p>{petData.age} years old</p>
                                 <p><h1>Location</h1></p>
                                 <p>{petData.location}</p>
+                                <p><h1>Special Requirement</h1></p>
+                                <p>{petData.specialRequirements}</p>
                                 <p><h1>My Details</h1></p>
                                 <p>{petData.description}</p>
                                 <p><h1>Adoption Details</h1></p>
@@ -54,7 +56,6 @@ function PetProfile() {
                                     If they believe that both you and your chosen dog are a good match then
                                     they'll arrange for you to meet.
                                 </p>
-                                <ConnectionEmail />
                                 <p></p>
                             </div>
                         </div>
