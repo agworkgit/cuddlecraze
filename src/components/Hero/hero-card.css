@@ -1,5 +1,5 @@
 .hero-info {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
     padding-top: 6rem;
     padding-bottom: 3rem;
