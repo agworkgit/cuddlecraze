@@ -1,5 +1,4 @@
 import './pet-page.css';
-import PetCard from '../../components/PetCard/PetCard';
 import Footer from '../../components/Footer/Footer';
 import SectionBorder from '../../components/SectionBorder/SectionBorder';
 import PetProfile from './PetPageCard';
