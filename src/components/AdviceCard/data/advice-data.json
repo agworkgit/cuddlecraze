@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "Importance of Regular Exercise for Dogs",
-        "image": "../../../../public/images/adviceData1.jpg",
+        "image": "https://images.unsplash.com/photo-1562176566-e9afd27531d4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "minutes": 3,
         "description": "Regular exercise is crucial for your dog's health and happiness.",
         "paragraphs": {
@@ -19,7 +19,7 @@
     {
         "id": 2,
         "title": "Nutrition Tips for a Healthy Dog Diet",
-        "image": "../../../../public/images/adviceData2.jpg",
+        "image": "https://images.unsplash.com/photo-1536012441472-aae6b3ce330f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "minutes": 3,
         "description": "Discover essential nutrition tips for your dog's health.",
         "paragraphs": {
@@ -37,7 +37,7 @@
     {
         "id": 3,
         "title": "Grooming Essentials: Keeping Your Dog Clean and Tidy",
-        "image": "../../../../public/images/adviceData3.jpg",
+        "image": "https://images.unsplash.com/photo-1605366873371-6b8e5012c96e?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "minutes": 4,
         "description": "Learn how to maintain your dog's hygiene with proper grooming techniques.",
         "paragraphs": {
@@ -56,7 +56,7 @@
     {
         "id": 4,
         "title": "Understanding Your Dog's Body Language",
-        "image": "../../../../public/images/adviceData4.jpg",
+        "image": "https://images.unsplash.com/photo-1527084010108-605725de32ba?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "minutes": 3,
         "description": "Decode your dog's body language to better understand their needs and emotions.",
         "paragraphs": {
@@ -73,7 +73,7 @@
     {
         "id": 5,
         "title": "Creating a Safe Environment for Your Dog at Home",
-        "image": "../../../../public/images/adviceData5.jpg",
+        "image": "https://plus.unsplash.com/premium_photo-1675881734691-65e4bc2a9125?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "minutes": 3,
         "description": "Ensure your home is a safe and comfortable place for your dog.",
         "paragraphs": {
@@ -91,7 +91,7 @@
     {
         "id": 6,
         "title": "Training Basics: Teaching Your Dog Good Manners",
-        "image": "../../../../public/images/adviceData6.jpg",
+        "image": "https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=1924&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "minutes": 2,
         "description": "Learn essential training techniques to teach your dog obedience and manners.",
         "paragraphs": {
@@ -108,7 +108,7 @@
     {
         "id": 7,
         "title": "Socialization Tips: Helping Your Dog Interact with Others",
-        "image": "../../../../public/images/adviceData7.jpg",
+        "image": "https://images.unsplash.com/photo-1591208333284-825682219525?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "minutes": 2,
         "description": "Discover how to socialize your dog effectively for positive interactions with people and other animals.",
         "paragraphs": {
@@ -129,7 +129,7 @@
     {
         "id": 8,
         "title": "Healthcare Essentials: Maintaining Your Dog's Wellness",
-        "image": "../../../../public/images/adviceData8.jpg",
+        "image": "https://images.unsplash.com/photo-1453227588063-bb302b62f50b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "minutes": 4,
         "description": "Learn about essential healthcare practices to keep your dog healthy and prevent illnesses.",
         "paragraphs": {

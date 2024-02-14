@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
+import './Contacted-adopted.css'
 function ContactedPetsContainer() {
   const [contactedPets, setContactedPets] = useState([]);
 
@@ -8,6 +8,11 @@ function ContactedPetsContainer() {
     const contactedPetsData = JSON.parse(localStorage.getItem('petData')) || [];
     setContactedPets(contactedPetsData.filter(pet => pet.contacted));
   }, []);
+
+  const updateContactedPets = () => {
+    const contactedPetsData = JSON.parse(localStorage.getItem('petData')) || [];
+    setContactedPets(contactedPetsData.filter(pet => pet.contacted));
+  };
 
   const removeFromList = (petId) => {
     // Update the local storage with the updated contacted pets data
@@ -29,9 +34,9 @@ function ContactedPetsContainer() {
           >
             <h2 className="pet-title">{pet.name}</h2>
             <img src={pet.image} alt={pet.name} className="card-image" />
-            <p className="pet-description">{pet.description}</p>
+         
           </Link>
-          <button onClick={() => removeFromList(pet.id)}>Remove from list</button>
+          <button className = 'remove-button' onClick={() => removeFromList(pet.id)}> ❌ Remove from list</button>
         </div>
       ))}
     </div>
