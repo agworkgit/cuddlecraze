@@ -1,5 +1,6 @@
 import './hero-card.css'
 import './hero.css'
+import { Link } from 'react-router-dom';
 
 function HeroCard() {
     return (
@@ -10,7 +11,9 @@ function HeroCard() {
                         <img className="hero-image" src="./images/sunset.jpg" alt="Betsy" />
                         <div className="card-overlay">
                             <div className="card-title-hero">Looking To Adopt?</div>
+                            <Link to="/pets-page">
                             <a href="" className="button">Click Here</a>
+                            </Link>
                         </div>
                     </div>
                 </div>
