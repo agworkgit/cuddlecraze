@@ -1,26 +1,39 @@
 import './pet-page.css'
 import React, {useEffect, useState} from 'react'
 
-// const petData = ({name, location, age, image, breed, 
-//                 specialRequirements, description}) => {
-
-//                     const [dogs, dogData] = useState([]);
-
-//                     useEffect ( () => {
-//                         fetch('./petData.json')
-//                         .then((response) => response.json())
-//                         .then((data) => {
-//                             dogData(data.id)
-//                             console.log('logging out dogs: ${dogs[0].name}');
-//                         })
-//                         .catch((error) => console.error('Error fetching characters:', error));
-//                     },[]);
-//                 }
-
-
 function PetProfile() {
 
     const petData = JSON.parse(localStorage.getItem("selectedDog"))
+    const [favorites, setFavorites] = useState({});
+
+  useEffect(() => {
+    const petFavorites = localStorage.getItem('petFavorites');
+    if (petFavorites) {
+      setFavorites(JSON.parse(petFavorites));
+    }
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const petFavorites = localStorage.getItem('petFavorites');
+      if (petFavorites) {
+        setFavorites(JSON.parse(petFavorites));
+      }
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const toggleFavorite = () => {
+    const updatedFavorites = { ...favorites };
+    if (updatedFavorites[petData.id]) {
+      delete updatedFavorites[petData.id];
+    } else {
+      updatedFavorites[petData.id] = true;
+    }
+    setFavorites(updatedFavorites);
+    localStorage.setItem('petFavorites', JSON.stringify(updatedFavorites));
+  };
+
 
     return (
         <div className="pet-card">
@@ -38,6 +51,11 @@ function PetProfile() {
 
                         <div className="card-pet">
                             <div className="card-body">
+                            <button
+                                className={`pet-card-fav-button ${favorites[petData.id] ? 'fav' : 'addfav'}`}
+                                onClick={toggleFavorite}>
+                                {favorites[petData.id] ? '💖 Added!' : '🤍 Add to favourites'}
+                            </button>
                                 <h1>Breed</h1>
                                 <p>{petData.breed}</p>
                                 <h1>Age</h1>
@@ -58,23 +76,6 @@ function PetProfile() {
                                 </p>
                             </div>
                         </div>
-
-                        {/* <img className="card-image" src="./images/stella.jpg" alt="Betsy" />
-                        <div className="card-overlay-list">
-                            <p className="rezerved-tag">Rezerved</p>
-                            <div className='pet-card-info'>
-                                <h1 className="pet-title">Pet Name</h1>
-                                <p className='pet-location'>Location: <span className='pet-location'>London</span></p>
-                                <button className='button pet-card-button'>Adopt</button>
-                            </div>
-                            <p className="pet-subtitle">Our top start this month is none other than this charming fella.</p>
-                            <div className='pet-card-tags'>
-                                <span className='breed-tag'>Crossbreed</span>
-                                <span className='preference-tag'>Can live with dogs</span>
-                                <span className='support-tag'>Needs some support</span>
-                            </div> */}
-                        {/* <FavouriteIcon /> */}
-                        {/* </div> */}
                     </div>
                 </div>
             </div>

@@ -92,6 +92,18 @@ div {
     box-sizing: border-box;
 }
 
+.pet-card-fav-button {
+    background-color: var(--card-color);
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    color: var(--card-text-color);
+}
+
+.pet-card-fav-button img {
+    height: 100px;
+}
+
 /* Breakpoints */
 @media screen and (max-width: 992px) {
     .pet-container {
