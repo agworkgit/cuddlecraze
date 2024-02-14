@@ -40,14 +40,19 @@ function PetProfile() {
                             <div className="card-body">
                                 <h1>Breed</h1>
                                 <p>{petData.breed}</p>
+                                <br></br>
                                 <h1>Age</h1>
                                 <p>{petData.age} years old</p>
+                                <br></br>
                                 <h1>Location</h1>
                                 <p>{petData.location}</p>
+                                <br></br>
                                 <h1>Special Requirement</h1>
                                 <p>{petData.specialRequirements}</p>
+                                <br></br>
                                 <h1>My Details</h1>
                                 <p>{petData.description}</p>
+                                <br></br>
                                 <h1>Adoption Details</h1>
                                 <p>Once you've found 'the one', add to your favourites. Contact our team and
                                     arrange to visit them - taking your completed application form with you.
