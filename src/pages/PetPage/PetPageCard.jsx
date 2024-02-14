@@ -29,7 +29,7 @@ function PetProfile() {
                     <div>
                         <div className="cardd">
                             <div className="card-bodyy">
-                                <p><h1>{petData.name}</h1></p>
+                                <h1>{petData.name}</h1>
                             </div>
                         </div>
                         <div className="cardd text-bg-dark">
