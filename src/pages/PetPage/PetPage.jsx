@@ -16,12 +16,9 @@ function PetPage() {
             <div>
                 <ConnectionEmail />
             </div>
-            <div>
-                <DogVideos />
-            </div>
-            <br></br>
-            <div>
-                <DogFacts />
+            <div className='row'>
+                <div className='col-lg-4 col-md-12'><DogVideos /></div>
+                <div className='col-lg-8 col-md-12'><DogFacts /></div>
             </div>
             <br></br>
             <SectionBorder/>
