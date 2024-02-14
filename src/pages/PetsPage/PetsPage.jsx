@@ -7,7 +7,7 @@ function PetsPage() {
     
 
     return ( 
-        <div>
+        <div id='pets-page' className='pets-page section container'>
             <SearchFilters />
             <SectionBorder/>
             <Footer />
