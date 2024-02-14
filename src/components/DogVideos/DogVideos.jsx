@@ -7,7 +7,7 @@ function DogVideos() {
 
   // const [data, setData] = useState([]);
 
-  // const dog = JSON.parse(localStorage.getItem("selectedDog"))
+  const dog = JSON.parse(localStorage.getItem("selectedDog"))
   // const dogType = dog.breed
   // const apiKey = "AIzaSyCZEcJXXbSbG_g0wR2uhHpEc7LZZEJbJy4"
   // const search = "how%20to%20care%20for%20a%20" + dogType

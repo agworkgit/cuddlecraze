@@ -1,37 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './pet-card.css';
+import { Link } from 'react-router-dom';
 
 const PetCard = ({ item }) => {
-  const [favorites, setFavorites] = useState({});
-
-  useEffect(() => {
-    const petFavorites = localStorage.getItem('petFavorites');
-    if (petFavorites) {
-      setFavorites(JSON.parse(petFavorites));
-    }
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const petFavorites = localStorage.getItem('petFavorites');
-      if (petFavorites) {
-        setFavorites(JSON.parse(petFavorites));
-      }
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const toggleFavorite = () => {
-    const updatedFavorites = { ...favorites };
-    if (updatedFavorites[item.id]) {
-      delete updatedFavorites[item.id];
-    } else {
-      updatedFavorites[item.id] = true;
-    }
-    setFavorites(updatedFavorites);
-    localStorage.setItem('petFavorites', JSON.stringify(updatedFavorites));
-  };
-
+  
   return (
     <div className="pet-card">
       <div className="pet-card-item">
@@ -54,12 +26,7 @@ const PetCard = ({ item }) => {
           </div>
         </div>
       </div>
-      <button
-        className={`pet-card-fav-button ${favorites[item.id] ? 'fav' : 'addfav'}`}
-        onClick={toggleFavorite}
-      >
-        {favorites[item.id] ? '💖 Added!' : '🤍 Add to favourites'}
-      </button>
+      
     </div>
   );
 };
