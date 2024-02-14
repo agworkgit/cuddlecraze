@@ -65,6 +65,7 @@ const ConnectionEmail = () => {
               <textarea type="text" name="user_name" id="name" className="nameInput" value={name} onChange={(e) => setName(e.target.value)}></textarea>
               <label htmlFor="email" className="">Your email</label>
               <textarea type="text" id="email" name="user_email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)}></textarea>
+
             </div>
             <div className='subjectBox'>
               <label htmlFor="email" className="">Subject</label>

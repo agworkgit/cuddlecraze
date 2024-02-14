@@ -38,11 +38,11 @@ const Header = () => {
               </Link>
             </li>
 
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to="/login" className="nav-link" onClick={() => { handleMenuClose(); }}>
                 <i className="bi bi-house nav-icon"></i> Login / Sign Up
               </Link>
-            </li>
+            </li> */}
 
             {navigate && (
               <>
