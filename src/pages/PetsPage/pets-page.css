@@ -1,7 +1,7 @@
 .pets-container {
     background-color: var(--background-color);
     /* height: 100vh; */
-    padding-top: 6rem;
+    padding-top: 9rem;
     max-width: 968px;
     margin: 0 auto;
 }
