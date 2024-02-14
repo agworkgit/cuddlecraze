@@ -46,20 +46,20 @@ export const ConnectionEmail = () => {
         <form id="contact-form" ref={form}>
 
             <div className="nameEmail">
-                <label for="name" className="">Your name</label>
+                <label htmlFor="name" className="">Your name</label>
                 <textarea type="text" name="user_name" id="name" className="nameInput"></textarea>
                     
-                <label for="email" className="">Your email</label>
+                <label htmlFor="email" className="">Your email</label>
                 <textarea type="text" id="email" name="user_email" className="form-control"></textarea> 
             </div>
             
             <div className='subjectBox'>
-                <label for="email" className="">Subject</label>
+                <label htmlFor="email" className="">Subject</label>
                 <textarea type="text" name="subject" id="subject" className="form-control">{placeholderMsg}</textarea> 
             </div> 
             
             <div className="messageBox">
-                    <label for="message">Your Message</label>
+                    <label htmlFor="message">Your Message</label>
                     <textarea type="text" id="message" name="message" rows="2" className="form-control md-textarea"></textarea> 
             </div>
 
@@ -67,7 +67,7 @@ export const ConnectionEmail = () => {
 
     </div>
 
-    <div class="">
+    <div className="">
         <p>Please include:</p>
         <ol>
             <li>Your full name</li>
