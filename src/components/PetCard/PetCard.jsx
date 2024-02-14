@@ -10,7 +10,7 @@ const PetCard = ({ item }) => {
         <div>
           <img className="card-image" src={item.image} alt={item.name} />
           <div className="card-overlay-list">
-            <p className="rezerved-tag">Reserved</p>
+            {/* <p className="rezerved-tag">Reserved</p> */}
             <div className="pet-card-info">
               <h1 className="pet-title">{item.name}</h1>
               <p className="pet-location">
