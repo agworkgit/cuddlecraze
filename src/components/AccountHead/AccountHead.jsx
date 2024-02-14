@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; // Added import statement for React
 import AccountInfo from './AccountInfo.json'; // Import the JSON file
 import './account-head.css';
 
