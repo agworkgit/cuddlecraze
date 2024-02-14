@@ -14,16 +14,17 @@ We also provide an email service allowing users to make enquiries about their ch
 
 ## URL
 
-Check the deployed web app at the following link:
+Check the deployed web app at the following link: 
 
 ## APIs
 
 - YouTube API - provides a dynamically-created YouTube video with tips on how to care for your chosen breed
 - Random Dog Facts - provides a random dog fact for fun and flavour
 
-## Libraries
+## Libraries/Technologies
 
 - EmailJs - allows users to send an email to the CuddleCraze team at the push of a button. The team will then use this email to connect the adopter user with the adoptee user
+- Express API - used to allow dynamic updating of the JSON files in the application 
 
 ## Installation
 
@@ -37,17 +38,13 @@ Installation not required, use the deployed link listed under Usage.
 
 The site has two main functions.
 
-- Listing a dog
-
-By clicking List in the navbar, the user will be taken to a page that allows them to upload details of a dog they wish to be re-homed. Once submitted, this data will be saved in a JSON file and the dog's profile will be created in our database
-
 - Adopting a dog
 
 By clicking Adopt in the navbar, the user will be taken to our doggie database, filling with dynamically-created cards of all the dogs in our system. Using filters at the top of the page, the user can refine their search by breed or location. Clicking on the dog card will take them to the dog's profile page, with all their information, a dog video on how to take care of that particular breed, and an email form they can use to contact us, requesting us to connect them with their chosen dog's current owner
 
-The following image shows the web application's appearance and functionality:
+- Listing a dog
 
-> **Note**: This layout is designed to be responsive and will change appearence based on time of day (day/night).
+If a user makes an account, they can then list an animal they wish to re-home. Clicking on the Account tab on the Navbar will take you to your personal page. From there, click a button called 'Add Pet', which will prompt you for information about your dog. Submit, and your dog will be added to our database!
 
 ## Credit
 
