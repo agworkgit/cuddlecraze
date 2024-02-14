@@ -14,7 +14,7 @@ We also provide an email service allowing users to make enquiries about their ch
 
 ## URL
 
-Check the deployed web app at the following link: 
+Check the deployed web app at the following link: https://cuddle-craze.netlify.app/#/
 
 ## APIs
 
