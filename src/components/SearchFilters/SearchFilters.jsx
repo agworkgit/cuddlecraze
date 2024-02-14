@@ -60,7 +60,7 @@ const SearchFilters = function() {
         <div id="pets-content" className='pets-content grid'>
             {filteredDogs.map((item) => (
             <Link 
-                to="/pet-page/"
+                to="/pet-page"
                 onClick={() => {localStorage.setItem("selectedDog", JSON.stringify(item))
                 }}
             >

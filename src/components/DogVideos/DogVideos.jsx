@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+
 import './DogVideos.css'
+import axios from 'axios';
 
 function DogVideos() {
 
@@ -7,47 +9,48 @@ function DogVideos() {
   //  (as long as the quote hasn't been exceeded) -----------------
 
   const [data, setData] = useState([]);
+
   const dog = JSON.parse(localStorage.getItem("selectedDog"))
   const dogType = dog.breed
   const apiKey = "AIzaSyCZEcJXXbSbG_g0wR2uhHpEc7LZZEJbJy4"
   const search = "how%20to%20care%20for%20a%20" + dogType
-  const queryURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelType=any&maxResults=3&order=relevance&q=" + search + "&key=" + apiKey
-  
-  useEffect(() => {
-    fetch(queryURL)
-    .then((response) => response.json())
-    .then((data) => setData(data))
-  }, []);
+  const queryURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&&type=video&channelType=any&maxResults=3&order=relevance&q=" + search + "&key=" + apiKey
+  const videoBox = $('#videoBox')
 
-  // const src1 = "//www.youtube.com/embed/" + data.items[0].id.videoId
-  // const src2 = "//www.youtube.com/embed/" + data.items[1].id.videoId
-  // const src3 = "//www.youtube.com/embed/" + data.items[2].id.videoId
+  async function axiosGet() {
+    await axios
+      .get(queryURL)
+      .then((res)=> {
+        setData(res.data.items)
+      })
+      .then(()=> {
+          videoBox.empty();
 
-  // -----------------------------------------------
+          for (let i = 0; i < data.length; i++) {
+            const vidUrl = data[i].id.videoId
+            console.log(vidUrl)
+            const video = $('<iframe>')
+            const srcURL = '//youtube.com/embed/' + vidUrl
+            video.attr('src', srcURL)
+            videoBox.append(video)
+        }
+      }
+      )
+  }
 
-  // this is the static component
-  // when the API is functioning, just swap out the src links for
-  // {src1}
-  // {src2}
-  // {src3}
-console.log(search)
+  useEffect(()=>{
+    axiosGet();
+  },[]);
+
+
+
   return (
     <div>
-      {/* <div className="videoContainerVertical">
+      <div className="videoContainerHorizontal">
         <h3>Helpful Videos</h3>
-        <iframe src={src1}></iframe>
-        <iframe src={src2}></iframe>
-        <iframe src={src3}></iframe>
-      </div> */}
-      <br></br>
-      <br></br>
-      <div className='videoContainerHorizontal'>
-        <h3>Helpful Videos</h3>
-        <iframe src="//youtube.com/embed/Jk5PpPH9AN8"></iframe>
-        <iframe src="//youtube.com/embed/-j3PkeNiR0E"></iframe>
-        <iframe src="//youtube.com/embed/NvGErwd1Nbs"></iframe>
+        <div id='videoBox'></div>
       </div>
-
+      <br></br>
     </div>
    );
   }

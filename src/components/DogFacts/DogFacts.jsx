@@ -25,7 +25,7 @@ function DogFacts() {
       return (
         <div className='card container-fluid'>
             <h2>Did you know...?</h2>
-            <p><emphasis>{data.facts}</emphasis></p>
+            <p>{data.facts}</p>
         </div>
       )
 }
