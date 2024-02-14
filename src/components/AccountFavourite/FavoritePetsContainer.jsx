@@ -1,5 +1,3 @@
-// FavoritePetsContainer.js
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import petsData from '../PetCard/data/petData.json';
@@ -42,14 +40,16 @@ function FavoritePetsContainer() {
         .map((pet) => (
           <div key={pet.id} className="favorite-card">
             <Link
-              to={`/pet/profile/${pet.id}`}
-              className="favorite-card-link"
-              target="_blank"
-              rel="noopener noreferrer"
+              to="/pet-page"
+              onClick={() => {
+                localStorage.setItem("selectedDog", JSON.stringify(pet));
+              }}
+              target="_blank" // Open link in a new page
+              rel="noopener noreferrer" // Security best practice
             >
-              <div className="card-content">
-                <h2 className="favorite-card-title">{pet.name}</h2>
-                <img src={pet.image} alt={pet.name} className="favorite-card-image" />
+              <div>
+                <h2 className='favorite-card-title'>{pet.name}</h2>
+                <img className="favorite-card-image" src={pet.image} alt={pet.name} />
               </div>
             </Link>
             <button
