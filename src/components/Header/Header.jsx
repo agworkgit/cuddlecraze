@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext } from "react";
 import { ThemeContext } from "../../App";
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
@@ -19,12 +19,6 @@ const Header = () => {
   const handleMenuClose = () => {
     setMenuOpen(false);
   };
-
-  useEffect(() => {
-    if (location.pathname !== '/portfolio' && location.pathname !== '/contact') {
-      // Additional logic to perform when not on portfolio or contact
-    }
-  }, [location]);
 
   const logoImage = theme === 'dark-mode' ? './logos/cuddle-craze-light.png' : './logos/cuddle-craze-dark.png';
 
@@ -54,11 +48,11 @@ const Header = () => {
               <>
                 {location.pathname !== '/portfolio' && location.pathname !== '/contact' && (
                   <>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                       <ScrollLink to="about" className="nav-link" smooth="true" duration={200} onClick={() => { handleMenuClose(); }}>
                         <i className="bi bi-person-circle nav-icon"></i> List Pet
                       </ScrollLink>
-                    </li>
+                    </li> */}
 
                     <li className="nav-item">
                       <Link to="/pets-page" className="nav-link" smooth="true" duration={200} onClick={() => { handleMenuClose(); }}>
