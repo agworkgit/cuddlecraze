@@ -24,3 +24,11 @@
 #validation {
     margin-top: 10px;
 }
+
+#message{
+    min-height: 200px;
+}
+
+#subject{
+    height: fit-content;
+}

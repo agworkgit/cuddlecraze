@@ -5,9 +5,6 @@ import axios from 'axios';
 
 function DogVideos() {
 
-  // --- This is the API functionality. Just uncomment it to make it work
-  //  (as long as the quote hasn't been exceeded) -----------------
-
   const [data, setData] = useState([]);
 
   const dog = JSON.parse(localStorage.getItem("selectedDog"))
@@ -17,32 +14,27 @@ function DogVideos() {
   const queryURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&&type=video&channelType=any&maxResults=3&order=relevance&q=" + search + "&key=" + apiKey
   const videoBox = $('#videoBox')
 
-  async function axiosGet() {
+  const promise = new Promise(async function axiosGet() {
     await axios
       .get(queryURL)
-      .then((res)=> {
-        setData(res.data.items)
+      .then((res)=> {setData(res.data.items)})
       })
-      .then(()=> {
-          videoBox.empty();
-
-          for (let i = 0; i < data.length; i++) {
-            const vidUrl = data[i].id.videoId
-            console.log(vidUrl)
-            const video = $('<iframe>')
-            const srcURL = '//youtube.com/embed/' + vidUrl
-            video.attr('src', srcURL)
-            videoBox.append(video)
-        }
-      }
-      )
-  }
-
+  
   useEffect(()=>{
-    axiosGet();
+    promise;
   },[]);
 
-
+  promise.then(function(){
+    for (let i = 0; i < data.length; i++) {
+      const vidUrl = data[i].id.videoId
+      
+      const video = $('<iframe>')
+      const srcURL = '//youtube.com/embed/' + vidUrl
+      video.attr('src', srcURL)
+      videoBox.append(video)
+      }
+  })
+  
 
   return (
     <div>
