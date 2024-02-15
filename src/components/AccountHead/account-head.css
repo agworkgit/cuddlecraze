@@ -1,91 +1,90 @@
 .account-head-container {
-    width: 968px;
-    margin: 0 auto;
+    width: 100%; /* Adjusted to full width for responsiveness */
     padding-bottom: 20px; /* Adjust as needed */
     text-align: center; /* Center align the content */
-}
-
-.profile-picture {
-    width: 200px;
-    height: 200px;
+  }
+  
+  .profile-picture {
+    width: 150px; /* Reduced width for smaller screens */
+    height: 150px; /* Reduced height for smaller screens */
     border-radius: 50%; /* Make the profile picture circular */
     overflow: hidden; /* Hide overflowing parts of the image */
-    margin: 0 auto 20px; /* Center align the picture and add margin bottom */
-}
-
-.profile-picture img {
+    margin: 0 auto 10px; /* Center align the picture and reduce margin bottom */
+  }
+  
+  .profile-picture img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensure the image covers the entire circular area */
-}
-
-.profile-picture input[type="file"] {
+  }
+  
+  .profile-picture input[type="file"] {
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0;
     cursor: pointer;
-}
-
-.profile-section {
-    margin-bottom: 20px;
+  }
+  
+  .profile-section {
+    margin-bottom: 10px; /* Reduce margin bottom for smaller screens */
     position: relative; /* Make the profile section container relative for absolute positioning */
-}
-
-.profile-section .profile-details {
+  }
+  
+  .profile-section .profile-details {
     text-align: center;
-}
-
-.interest-btn,
-.edit-btn,
-.remove-btn,
-.add-btn,
-.profile-input {
+  }
+  
+  .interest-btn,
+  .edit-btn,
+  .remove-btn,
+  .add-btn,
+  .profile-input {
     background-color: var(--button-color);
+    font-family: var(--description-font);
     color: white;
     padding: 5px 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Reduce margin bottom for smaller screens */
     border-radius: 20px;
     border: none;
     outline: none;
-    margin: 10px; /* Remove the black border on click */
-}
-
-.edit-btn,
-.remove-btn,
-.add-btn {
+    margin: 5px; /* Reduce margin for smaller screens */
+  }
+  
+  .edit-btn,
+  .remove-btn,
+  .add-btn {
     cursor: pointer; /* Change cursor to pointer */
-}
-
-.profile-input {
+  }
+  
+  .profile-input {
     font-size: inherit; /* Inherit font size from parent */
-}
-
-.interest-btn,
-.remove-btn,
-.add-btn {
+  }
+  
+  .interest-btn,
+  .remove-btn,
+  .add-btn {
     padding: 5px 8px; /* Adjusted padding for smaller bubbles */
     margin-right: 5px; /* Added margin between bubbles */
     margin-bottom: 5px; /* Adjusted margin bottom */
     width: auto; /* Set width to auto */
-}
-
-.interest-field {
+  }
+  
+  .interest-field {
     display: inline-block; /* Display bubbles in the same line */
     margin-right: 5px; /* Added margin between bubbles */
     margin-bottom: 5px; /* Adjusted margin bottom */
     max-width:max-content;
     align-items: center; /* Align content in center */
     justify-content: center; /* Align content in center */
-
-}
-
-.interest-field input {
+  }
+  
+  .interest-field input {
     margin-right: 5px; /* Added margin between input and button */
     margin-bottom: 5px; /* Adjusted margin bottom */
-}
-
-.remove-btn {
+  }
+  
+  .remove-btn {
     background-color: rgb(210, 101, 101); /* Change button color to red */
     border-radius: 50%; /* Make button round */
     width: 20px; /* Set width of button */
@@ -94,28 +93,47 @@
     align-items: center; /* Align content in center */
     justify-content: center; /* Align content in center */
     margin-left: 5px; /* Add margin between bubbles */
-}
-
-/* Adjust input bubble width */
-.profile-picture input[type="file"] {
-    width: 200px; /* Same width as original profile picture */
-}
-
-/* Responsive Layout for Mobile */
-@media screen and (max-width: 576px) {
+  }
+  
+  /* Adjust input bubble width */
+  .profile-picture input[type="file"] {
+    width: 150px; /* Same width as original profile picture */
+  }
+  
+  /* Responsive Layout for Mobile */
+  @media screen and (max-width: 576px) {
     .remove-btn {
-        width: 30px; /* Adjust button width for mobile */
-        height: 30px; /* Adjust button height for mobile */
+      width: 30px; /* Adjust button width for mobile */
+      height: 30px; /* Adjust button height for mobile */
     }
-
+  
     .edit-btn,
     .remove-btn,
     .add-btn {
-        margin-right: 0; /* Reset margin for mobile */
-        margin-left: 0; /* Reset margin for mobile */
+      margin-right: 0; /* Reset margin for mobile */
+      margin-left: 0; /* Reset margin for mobile */
     }
-
+  
     .edit-btn {
-        margin-bottom: 10px; /* Add some space between buttons on mobile */
+      margin-bottom: 10px; /* Add some space between buttons on mobile */
     }
-}
+    .profile-section {
+        font-size: 14px; /* Adjust the font size for smaller screens */
+      }
+      
+      .profile-details {
+        font-size: 16px; /* Adjust the font size for smaller screens */
+      }
+      
+      .interest-btn,
+      .remove-btn,
+      .add-btn,
+      .profile-input {
+        font-size: 14px; /* Adjust the font size for smaller screens */
+      }
+      
+      .interest-field input {
+        font-size: 14px; /* Adjust the font size for smaller screens */
+      }
+  }
+  

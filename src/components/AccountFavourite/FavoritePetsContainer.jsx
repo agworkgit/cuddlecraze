@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import petsData from '../PetCard/data/petData.json'; // Make sure this path is correct
+import petsData from '../PetCard/data/petData.json';
 
 function FavoritePetsContainer() {
   const [favorites, setFavorites] = useState({});
@@ -34,23 +34,26 @@ function FavoritePetsContainer() {
   };
 
   return (
-    <div className="cardContainer">
+    <div className="favorite-pets-container">
       {petsData
         .filter((pet) => favorites[pet.id])
         .map((pet) => (
-          <div key={pet.id} className="card">
+          <div key={pet.id} className="favorite-card">
             <Link
-              to={`/pet/profile/${pet.id}`}
-              className="card-link"
-              target="_blank"
-              rel="noopener noreferrer"
+              to="/pet-page"
+              onClick={() => {
+                localStorage.setItem("selectedDog", JSON.stringify(pet));
+              }}
+              target="_blank" // Open link in a new page
+              rel="noopener noreferrer" // Security best practice
             >
-              <h2 className="pet-title">{pet.name}</h2>
-              <img src={pet.image} alt={pet.name} className="card-image" />
-             
+              <div>
+                <h2 className='favorite-card-title'>{pet.name}</h2>
+                <img className="favorite-card-image" src={pet.image} alt={pet.name} />
+              </div>
             </Link>
             <button
-              className={`pet-fav-button ${favorites[pet.id] ? 'fav' : 'addfav'}`}
+              className={`favorite-card-fav-button ${favorites[pet.id] ? 'fav' : 'addfav'}`}
               onClick={() => toggleFavorite(pet.id)}
             >
               {favorites[pet.id] ? '❌ Remove from favorites' : '🤍 Add to favorites'}
