@@ -8,7 +8,7 @@ CuddleCraze is a brand new application to help people make connections via manki
 
 We allow users to list dogs that need re-homing in our Doggie Database, providing forms to cataglogue their age, breed, special requirments etc. Adopters can then scroll through this database, filtering it by location or breed, to find a dog to suit what they and their family can provide. Dogs can be marked as reserved once they've found a new home, and users can even save dogs to their favourites.
 
-Each dog has its own dynamically-created page with their information, a video about tips on how to care for that specific breed, and even a random dog fact, for fun!
+Each dog has its own dynamically-created page with their information and even a random dog fact, for fun!
 
 We also provide an email service allowing users to make enquiries about their chosen dog, connecting users whilst also maintaining internet privacy
 
@@ -18,7 +18,7 @@ Check the deployed web app at the following link: https://cuddle-craze.netlify.a
 
 ## APIs
 
-- YouTube API - provides a dynamically-created YouTube video with tips on how to care for your chosen breed
+- REST API - provides a dynamically-created YouTube video with tips on how to care for your chosen breed
 - Random Dog Facts - provides a random dog fact for fun and flavour
 
 ## Libraries/Technologies
