@@ -11,11 +11,10 @@ const ConnectionEmail = () => {
   const [message, setMessage] = useState('');
 
   const placeholderMsg = `I'm Interested In Adopting ${dog?.name}! ID: ${dog?.id}`;
-
   const sendEmail = (e) => {
     e.preventDefault();
     console.log('Sending email...');
-
+  
     // Send email using emailjs library
     emailjs
       .sendForm('service_zqg332a', 'template_ytgb7dh', form.current, {
@@ -29,9 +28,12 @@ const ConnectionEmail = () => {
         const messageSent = document.createElement('p');
         messageSent.textContent = 'Your message has been sent!';
         validation.current.appendChild(messageSent);
-
-        // Update the JSON file with the attribute 'contacted' set to 'true' for the corresponding dog
-        const updatedPetsData = petsData.map((pet) => {
+  
+        // Retrieve the existing petData from local storage
+        const existingPetData = JSON.parse(localStorage.getItem('petData')) || [];
+  
+        // Update the contacted status for the corresponding pet
+        const updatedPetData = existingPetData.map(pet => {
           if (pet.id === dog.id) {
             console.log('Updating contacted status for pet:', pet.id);
             return {
@@ -41,12 +43,12 @@ const ConnectionEmail = () => {
           }
           return pet;
         });
-
-        console.log('Updated pets data:', updatedPetsData);
-
-        // Save the updated pets data back to local storage
-        localStorage.setItem('petData', JSON.stringify(updatedPetsData));
-        console.log('Updated contactedPetsData in local storage:', localStorage.getItem('petData'));
+  
+        console.log('Updated pets data:', updatedPetData);
+  
+        // Save the updated petData back to local storage
+        localStorage.setItem('petData', JSON.stringify(updatedPetData));
+        console.log('Updated petData in local storage:', localStorage.getItem('petData'));
       })
       .catch((error) => {
         console.log('FAILED...', error);
